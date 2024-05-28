@@ -1,0 +1,65 @@
+<!-- <div class="toBereturned" id="requestedBooksSection">
+    <div class="covHolder">
+        <img class="user-img" src="../img/8.webp " alt="user image">
+    </div>
+    <div class="dented-det">
+        <div class="Divname UserName">toshiba Inc words</div>
+        <div class="bookLaws">By gwan hoe</div>
+        <div class="stars">
+            <i class=" fa fa-star"></i>
+            <i class=" fa fa-star"></i>
+            <i class=" fa fa-star"></i>
+            <i class=" fa fa-star"></i>
+            <i class=" fa fa-star-half-stroke"></i>
+        </div>
+        <div class="bookLaws tinyFont">
+            and it came to pass in that hour that jesus had spoken of saying one of you will betray me
+        </div>
+        <div class="humanActions">
+            <div class="viewPic greBack">Available</div>
+            <div class="viewPic">Cancel</div>
+        </div>
+
+    </div>
+</div> -->
+<% requestedBooksDetails.forEach(book => { %>
+    <div class="toBereturned" >
+        <div class="covHolder">
+            <img class="user-img" src="/<%= book.BookCover %>" alt="book cover">
+        </div>
+        <div class="dented-det">
+            <div class="Divname UserName"> 
+                <% const maxLengthts = 20; // Set your desired maximum length %>
+                <% if (book.About.length > maxLengthts) { %>
+                    <%= book.Source.substring(0, maxLengthts) + '...' %>
+                <% } else { %>
+                    <%= book.About %>
+                <% } %></div>
+            <div class="bookLaws"><%= book.Author %></div>
+            <div class="stars">
+                <i class=" fa fa-star"></i>
+                <i class=" fa fa-star"></i>
+                <i class=" fa fa-star"></i>
+                <i class=" fa fa-star"></i>
+                <i class=" fa fa-star-half-stroke"></i>
+            </div>
+            <div class="bookLaws tinyFont">
+                <% const maxLength = 100; // Set your desired maximum length %>
+                <% if (book.About.length > maxLength) { %>
+                    <%= book.About.substring(0, maxLength) + '...' %>
+                <% } else { %>
+                    <%= book.About %>
+                <% } %>
+            </div>
+            <div class="humanActions">
+                <form action="/issue-book/<%= user._id %>/<%= book._id %>" method="post">
+                    <button type="submit" class="viewPic">Issue</button>
+                </form>
+                <form action="/Cancel-book/<%= book._id %>" method="post">
+                    <button type="submit" class="viewPic">Cancel</button>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+<% }) %>

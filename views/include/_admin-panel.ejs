@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeakReads</title>
+    <link rel="shortcut icon" href="../image/favicon-book-logo-300x300.png" type="image/x-icon">
+    <link rel="stylesheet" href="../image/favicon-book-logo-300x300.png">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/user.css">
+    <!-- <link rel="stylesheet" href="../css/library.css"> -->
+    <link rel="stylesheet" href="../css/adminLook.css">
+    <script defer src="../js/all.min.js"></script>
+    <!-- <script defer src="../js/home.js"></script> -->
+    <link rel="stylesheet" href="../fonts/NetflixSansBlack.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansBold.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansIcon.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansLight.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansMedium.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansRegular.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansThin.ttf">
+</head>
+<body  >
+    <div class="nav-bar" id="navi">
+        <div class="nav-left">
+            <a class="nav-img" href="/" ></a>
+            <div class="name ">eakReads</div>
+            
+        </div>
+        <div class="nav-right">
+            <div class="disTxt">Admin Filter</div>
+        </div>
+    </div>
+    <div class="budge">
+        <div class="logo">
+            <div class="nav-img" ></div>
+        </div>
+        <div class="drop-btn " id="dpb"><i class="d-btn fa fa-bars"></i></div>
+    </div>
+    <div class="adminFilterList eggroll">
+        <div class="filterer ">
+            <div class="src-top-h">
+                <div class="cta-inp">
+                    <input class="cta-input" id="tt" placeholder="Search user data and info" type="text">
+                    <div class="cta-srcha">
+                        <div class="cta-srch" onclick="searchBooks()" ><i class="src-icon fa fa-search"></i></div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="logKit arrangement">
+                <div class="gender">Ascending </div>
+                <label>
+                    <input type="radio" name="gender" value="Male" class="lemon" <% if (user && user.Gender === 'Male') { %>checked<% } %>> 
+                </label>
+              
+            </div>
+            <div class="logKit arrangement">
+                <div class="gender">Descending </div>
+          
+                <label>
+                    <input type="radio" name="gender" value="Female" class="lemon" <% if (user && user.Gender === 'Female') { %>checked<% } %>> 
+                </label>
+            </div> -->
+            <div class="dropDown">
+                <div class="dropdown-button1">
+                    <div class="eachCreatDiv4">
+                        
+                        <div class="jackAlign twicth">View Type</div>
+                        <select class="expand" name="ResourceType" id="options" onchange="displayDiv()">
+                            <option value="Users">Users</option>
+                            <option value="Books">Books</option>
+                            <option value="New Book">New Book</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="dropDown">
+                <div class="dropdown-button1">
+                    <div class="eachCreatDiv4">
+                        
+                        <div class="jackAlign twicth">Order by</div>
+                        <select class="expand" name="ResourceType" id="">
+                            <option value="Science">Date</option>
+                            <option value="Health">Alphabetically</option>
+                            <option value="Computer Science">First Name</option>
+                            <option value="Physics">Last Name</option>
+                            <option value="Earth Science">Gender</option>
+                           
+                        
+                            
+                        </select>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <div class="bookNumberOFResults">
+            <p class="bold100"  style="display: none; color: white;" id="tag1" >Users</p>
+            <p class="bold100" style="display: none; color: white;" id="tag2">Books</p>
+            <p class="bold100" style="display: none;" id="tag3">New Book</p>
+            <p class="bold100" style="display: none;" id="tag4">Borrowed Book(s)</p>
+            <p class="bold100" style="display: none;" id="tag5">Requested Book(s)</p>
+            <p class="bold100" style="display: none;" id="tag6">Pending Fine(s)</p>
+            <p class="bold100" style="display: none;" id="tag7">Business</p>
+        </div>
+        <div class="userDetails-card-info " style="display: none;" id="userBelt">
+            <div class="jackAlign">Library pattern</div>
+            <div class="jackAlign">User image</div>
+            <div class="jackAlign">Gender</div>
+            <div class="jackAlign">Name</div>
+            <div class="jackAlign">User type</div>
+            <div class="jackAlign">Possessed books</div>
+        </div>
+        <%-include('_user-details', { users: users, usersq: usersq }) %>
+        <div class="toBereturned" style="display: none;" id="estima">
+            <div class="covHolder">
+                <img class="user-img" src="../image/9.webp " alt="user image">
+            </div>
+            <div class="bokreSched">
+                <div class="Divname di1"><p class="UserName na1">Estimated return time</p></div>
+                <div class="clock-work">
+                    <div class="circle" >
+                        <div class="dots hr_dot"></div>
+                        <svg>
+                            <circle cx="70" cy="70" r="70"></circle>
+                            <circle cx="70" cy="70" r="70" id="hh"></circle>
+                        </svg>
+                        <div id="hours">00 <br><span>Hours</span></div>
+                    </div>
+                </div>
+                <div class="Divname ledLight">
+                    <div class="viewPic">Fine User <i class="fa fa-money-bill"></i></div>
+                    <div class="viewPic omoBill">Forgive <i class="fa fa-thumbs-up"></i></div>
+                </div>
+            </div>
+            
+        </div>
+  
+        <%-include('_edit-books')%>
+        
+        <form id="newBouk" style="display: none;" class="createBooks" action="/Newbooks" method="post" enctype="multipart/form-data" >
+            <div  class="createLeftBook">
+                <p class="bold100 edegBoy">Add Book</p>
+                <div class="eachCreatDiv">
+                    <label for="bookTitle" class="carryMore-details">Publishing house</label>
+                    <input class="creatFild" name="Source" type="text" placeholder="Book Title">
+                </div>
+                <div class="eachCreatDiv">
+                    <label for="bookTitle" class="carryMore-details">Author(s)</label>
+                    <input class="creatFild" name="Author" type="text" placeholder="Name(s) of the author(s) of the book">
+                </div>
+                <div class="eachCreatDiv">
+                    <label for="bookTitle" class="carryMore-details">Publication year</label>
+                    <input class="creatFild" name="Year" type="date" placeholder="Year in which books were published">
+                </div>
+                <div class="eachCreatDiv">
+                    <label for="bookTitle"   class="carryMore-details">Publication Title</label>
+                    <input class="creatFild" name="PublicationTitle" type="text" placeholder="Year in which books were published">
+                </div>
+                
+                <div class="eachCreatDiv1">
+                    <div class="eachCreatDiv2">
+                        <select class="expand" name="ResourceType" id="">
+                            <option value="Social Science">Social Science</option>
+                            <option value="Health & Medical">Health & Medical</option>
+                            <option value="Chemistry">Chemistry</option>
+                             <option value="Faith">Faith</option>
+
+                            <option value="Computer Science">Computer Science</option>
+                            <option value="Physics">Physics</option>
+                            <option value="Earth Science">Earth Science</option>
+                            <option value="Arts">Arts</option>
+                            <option value="Economics">Economics</option>
+                            <option value="Business">Business</option>
+                            <option value="Engineering">Engineering</option>
+                            <option value="Life Sciences">Life Sciences</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="eachCreatDiv paticular">
+                    <label for="bookTitle" class="carryMore-details">Shelf location</label>
+                   <div class="sidswao">
+                       <input class="creatFild1" name="Aisle" type="number" placeholder="Aistle/Stack">
+                       <input class="creatFild1" name="Shelf" type="number" placeholder="Shelf">
+                        <input class="creatFild1" name="Row" type="number" placeholder="Shelf row">
+                   </div>
+                </div>
+                <div class="eachCreatDiv">
+                    <label for="bookTitle" class="carryMore-details">Number of copies</label>
+                    <input class="creatFild" name="NumberOfCopies" type="number" placeholder="Number of Copies">
+                </div>
+                <div class="eachCreatDiv3">
+                    <label for="bookTitle" class="puby">Book Description</label>
+                    <textarea style="resize: none;" name="About" class="borderCurved" name="" id="" cols="30" rows="10" placeholder="About the book"></textarea>
+                </div>
+                <div class="butCollection theWikins">
+                    <button type="submit" class="viewPic">Add to Library</button>
+                    
+                </div>
+            </div>
+            <div class="createRightBook">
+                <p class="bold100 edegBoy">Book cover</p>
+                <div class="imageBookBack"><img id="capturedImage"  class="bmage" alt=""></div>
+                <div class="butCollection centtred">
+                    <!-- <input class="viewPic" type="file" placeholder="fa fa-file">Select File <i class="fa fa-file"></i></div> -->
+                    <div class="file-input-container">
+                        <label for="fileInput" class="file-label">
+                          <i class="fa fa-file"></i> Select a file
+                        </label>
+                        <input id="fileInput" name="BookCover" class="viewPic jadea" type="file" accept="image/*">
+                    </div>
+                    <!-- <div class="file-input-container">
+                        <label for="fileInput" class="file-label">
+                          <i class="fa fa-camera"></i> Picture
+                        </label>
+                        <input id="captureButton" type="button" class="col">View</input>
+                        
+                        <input id="fileInput" class="viewPic" type="file" accept="image/*" capture="environment" >
+                    </div> -->
+                    <!-- <div class="file-input-container">
+                        <label for="fileInput" class="file-label">
+                          <i class="fa fa-file"></i> Select a file
+                        </label>
+                        <input id="fileInput" class="viewPic" type="file">
+                    </div> -->
+                    <div id="cameraWindow">
+                        <video id="cameraFeed" autoplay></video>
+                    </div>
+                      <input type="button" value="BookCover" name="BookCover" id="captureButton" accept="image/*">
+                    
+                    <!-- <div class="req-book remae"><i class="fa fa-camera"></i>Picture</div> -->
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    // const captureButton = document.getElementById('captureButton');
+    // const capturedImage = document.getElementById('capturedImage');
+    
+    // captureButton.addEventListener('click', () => {
+    //   const constraints = {
+    //     video: true,
+    //   };
+      
+    //   navigator.mediaDevices.getUserMedia(constraints)
+    //     .then(function(stream) {
+    //       const video = document.createElement('video');
+    //       document.body.appendChild(video);
+    //       video.srcObject = stream;
+    //       video.onloadedmetadata = function(e) {
+    //         video.play();
+    //       };
+    //       captureButton.style.display = 'flex';
+    //       capturedImage.style.display = 'block';
+    //       video.addEventListener('click', function() {
+    //         const canvas = document.createElement('canvas');
+    //         canvas.width = video.videoWidth;
+    //         canvas.height = video.videoHeight;
+    //         canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+    //         const imageUrl = canvas.toDataURL('image/jpeg');
+    //         capturedImage.src = imageUrl;
+    //         stream.getTracks().forEach(track => track.stop());
+    //       });
+    //     })
+    //     .catch(function(err) {
+    //       console.error('Error accessing the camera:', err);
+    //     });
+    // });
+
+//     const captureButton = document.getElementById('captureButton');
+// const capturedImage = document.getElementById('capturedImage');
+// let video; // Declare video as a variable accessible in the entire script
+
+// captureButton.addEventListener('click', () => {
+//   const constraints = {
+//     video: true,
+//   };
+
+//   navigator.mediaDevices.getUserMedia(constraints)
+//     .then(function (stream) {
+//       video = document.createElement('video');
+//       document.body.appendChild(video);
+//       video.srcObject = stream;
+//       video.onloadedmetadata = function (e) {
+//         video.play();
+//       };
+//       captureButton.style.display = 'none'; // Hide the capture button
+//       capturedImage.style.display = 'block';
+//       video.addEventListener('click', function () {
+//         const canvas = document.createElement('canvas');
+//         canvas.width = video.videoWidth;
+//         canvas.height = video.videoHeight;
+//         canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+//         const imageUrl = canvas.toDataURL('image/jpeg');
+//         capturedImage.src = imageUrl;
+//         stream.getTracks().forEach(track => track.stop());
+
+//         // Hide the video element after capturing
+//         video.style.display = 'none';
+//       });
+//     })
+//     .catch(function (err) {
+//       console.error('Error accessing the camera:', err);
+//     });
+// });
+
+// // Optional: Add a function to show the capture button again
+// function showCaptureButton() {
+//   if (video) {
+//     video.style.display = 'block';
+//     captureButton.style.display = 'flex';
+//     capturedImage.style.display = 'none';
+//   }
+// }
+const captureButton = document.getElementById('captureButton');
+const capturedImage = document.getElementById('capturedImage');
+let video;
+const cameraWindow = document.getElementById('cameraWindow');
+
+captureButton.addEventListener('click', () => {
+  const constraints = {
+    video: true,
+  };
+
+  navigator.mediaDevices.getUserMedia(constraints)
+    .then(function (stream) {
+      video = document.createElement('video');
+      cameraWindow.appendChild(video);
+      video.srcObject = stream;
+      video.onloadedmetadata = function (e) {
+        video.play();
+      };
+      capturedImage.style.display = 'block';
+      cameraWindow.style.display = 'block'; // Show the camera window
+      video.addEventListener('click', function () {
+        const canvas = document.createElement('canvas');
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+        const imageUrl = canvas.toDataURL('image/jpeg');
+        capturedImage.src = imageUrl;
+        stream.getTracks().forEach(track => track.stop());
+        cameraWindow.style.display = 'none'; // Hide the camera window after capturing
+      });
+    })
+    .catch(function (err) {
+      console.error('Error accessing the camera:', err);
+    });
+});
+
+// Optional: Add a function to show the capture button again
+function showCaptureButton() {
+  if (video) {
+    video.style.display = 'block';
+    capturedImage.style.display = 'none';
+    cameraWindow.style.display = 'none'; // Hide the camera window
+  }
+}
+
+
+
+
+// na soooo
+function displayDiv() {
+    const selectedOption = document.getElementById('options').value;
+    localStorage.setItem('selectedViewType', selectedOption);
+            // const sortOrder = document.querySelector('input[name="order"]:checked').value;
+
+            // Show the corresponding div based on the selected option
+            document.querySelectorAll('.usher').forEach(element => {
+                   element.style.display = 'none';
+            });
+            document.getElementById('userBelt').style.display = 'none';
+            document.getElementById('tag1').style.display = 'none';
+            // books div...........................................
+            document.querySelectorAll('.bookReo').forEach(element => {
+                   element.style.display = 'none';
+            });
+            document.getElementById('tag2').style.display = 'none';
+            // New books div.......................................
+            document.getElementById('newBouk').style.display = 'none';
+            document.getElementById('tag3').style.display = 'none';
+            // Borrowed books...................................
+            document.querySelectorAll('estima').forEach(element => {
+                   element.style.display = 'none';
+            });;
+            document.getElementById('tag4').style.display = 'none';
+            // 
+            document.getElementById('tag5').style.display = 'none';
+
+            if (selectedOption === 'Users') {
+                document.querySelectorAll('.usher').forEach(element => {
+                   element.style.display = 'flex';
+                });
+                document.getElementById('userBelt').style.display = 'flex';
+                document.getElementById('tag1').style.display = 'flex';
+            } else if (selectedOption === 'Books') {
+                document.querySelectorAll('.bookReo').forEach(element => {
+                   element.style.display = 'flex';
+                });
+                // document.getElementById('bookReo').style.display = 'flex';
+                document.getElementById('tag2').style.display = 'flex';
+            }else if(selectedOption === 'New Book'){
+          
+                document.getElementById('newBouk').style.display = 'flex';
+
+                document.getElementById('tag3').style.display = 'flex';
+
+            }else if(selectedOption === 'Borrowed Book(s)'){
+                document.querySelectorAll('estima').forEach(element => {
+                   element.style.display = 'none';
+                });
+                document.getElementById('tag4').style.display = 'flex';
+            }else if(selectedOption === 'Requested Book(s)'){
+                // document.getElementById('estima').style.display = 'flex';
+                // document.getElementById('tag5').style.display = 'flex';
+
+            }
+            // } else if (selectedOption === 'option2') {
+            //     document.getElementById('option2Div').style.display = 'block';
+            // } else if (selectedOption === 'option3') {
+            //     document.getElementById('option3Div').style.display = 'block';
+            // }
+
+            // Output the selected sort order to the console
+            // console.log('Sort Order:', sortOrder);
+    
+}
+
+window.onload = function () {
+    // Get the stored value from localStorage
+    const storedViewType = localStorage.getItem('selectedViewType');
+
+    // Set the selected option in the "View Type" select input
+    if (storedViewType) {
+        const options = document.getElementById('options');
+        options.value = storedViewType;
+
+        // Trigger the onchange event manually to display the corresponding divs
+        displayDiv(); // Call displayDiv() to show/hide elements based on the stored value
+    }
+};
+document.getElementById('options').addEventListener('change', displayDiv);
+// setInterval(displayDiv, 500);
+async function searchBooks() {
+  const searchQuery = document.getElementById('tt').value;
+//   const resourceType = document.getElementById('resourceType').value;
+//   const publicationDate = document.getElementById('publicationDate').value;
+
+  try {
+    let url = `/adminPanel?search=${encodeURIComponent(searchQuery)}`;
+    // if (resourceType) {
+    //   url += `&resourceType=${encodeURIComponent(resourceType)}`;
+    // }
+    // if (publicationDate) {
+    //   url += `&publicationDate=${encodeURIComponent(publicationDate)}`;
+    // }
+
+    window.location.href = url; // Redirects to the library page with the search query and additional parameters
+  } catch (error) {
+    console.error('Error redirecting:', error);
+  }
+}
+
+</script>
+</html>

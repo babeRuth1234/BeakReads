@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeakReads</title>
+    <link rel="shortcut icon" href="/img/favicon-book-logo-300x300.png" type="image/x-icon">
+    <link rel="stylesheet" href="../imag/favicon-book-logo-300x300.png">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/userOval.css">
+    <script defer src="../js/all.min.js"></script>
+    <script defer src="../js/home.js"></script>
+    <link rel="stylesheet" href="../fonts/NetflixSansBlack.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansBold.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansIcon.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansLight.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansMedium.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansRegular.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansThin.ttf">
+</head>
+<body>
+    <div class="nav-bar" id="navi">
+        <div class="nav-left">
+            <a class="nav-img" href="/" ></a>
+            <div class="name ">eakReads</div>
+        </div>
+        <div class="nav-right">
+            <div class="nav-link "><a class="cont-link" href="/about-page">About</a></div>
+            <div class="nav-link "><a class="cont-link" href="/library">Library</a></div>
+            <div class="nav-link "><a class="cont-link"  href="https://www.bing.com/ck/a?!&&p=d97e0bb0affa36a9JmltdHM9MTcwMTM4ODgwMCZpZ3VpZD0xYjAwYzQyOC0yMjhmLTY0OTQtMTY5Zi1kNmNhMjM5MjY1ZmImaW5zaWQ9NTE5Nw&ptn=3&ver=2&hsh=3&fclid=1b00c428-228f-6494-169f-d6ca239265fb&psq=sites+that+provide+reading+music&u=a1aHR0cHM6Ly84dHJhY2tzLmNvbS9leHBsb3JlL3JlYWRpbmc&ntb=1">Library tunes</a></div>
+            <%-include('_nav-bar')%>
+            
+        </div>
+    </div>
+    <div class="budge">
+        <div class="logo">
+            <div class="nav-img" ></div>
+        </div>
+        <div class="drop-btn " id="dpb"><i class="d-btn fa fa-bars"></i></div>
+    </div>
+    <div class="top-pic">
+        <video autoplay muted loop id="myVideo">
+            <source src="/videos/LG_4K_DEMO_HDR_2018_(60FPS)_ELBA(1080p60)_Trim.mp4" type="video/mp4">
+        </video>
+        <div class="log process">
+            <p class="cta-txt">Your Shelf Assistant</p>
+            <div  class="cta-inp">
+                <input class="cta-input" id="pt" placeholder="Search for a keyword, title, abstract, author, journal, ISSN, ISBN" type="text">
+                <div class="cta-srcha">
+                    <div class="cta-srch" id="searchButton" ><i class="src-icon fa fa-search"></i></div>
+                </div>
+            </div>
+            <div class="und-txt">
+                <p class="cta-txt2">Discover academic journals, articles, & books-</p>
+                <p class="cta-txt2">on one seamless platform</p>
+                
+            </div>                
+        </div>
+    </div>
+
+    <div class="stat-bHold">
+        <div class="stats-board">
+            <div class="stat-Left">
+                <div class="pubStats inbtw lines"><p class="num1">700+</p><p class="under-txt">Publications</p></div>
+                <div class="acaStats inbtw"><p class="num2">1.9M</p><p class="under-txt extra-txt">Academic Articles</p></div>
+            </div>
+            <div class="stat-Right">
+                <div class="bookStats inbtw"><p class="num3">1.2M</p><p class="under-txt">Books</p></div>
+                <div class="langStats inbtw"><p class="num4">66+</p><p class="under-txt">Languages</p></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="boastHold">
+        <div class="boastCard-left">
+            <div class="cell">
+                <div class="boastImg"><img class="imgBst" src="/img/resourcesLogo.svg" alt="resources logo"></div>
+                <div class="boastTxt">Access over 85m academic resources</div>
+            </div>
+            <div class="cell">
+                <div class="boastImg"><img class="imgBst" src="/img/searchLogo.svg" alt="Search logo"></div>
+                <div class="boastTxt">Refine results with comprehensive filters</div>
+            </div>
+        </div>
+        <div class="boastCard-Right">
+            <div class="cell">
+                <div class="boastImg"><img class="imgBst" src="/img/cloudDownload.png" alt=" cloud safe logo"></div>
+                <div class="boastTxt">From our desk to your phone</div>
+            </div>
+            <div class="cell">
+                <div class="boastImg"><img class="imgBst" src="/img/alertsLogo.svg" alt=""></div>
+                <div class="boastTxt">Be the first to get content alerts, & research tips</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bookSlide">
+        <div class="bookSlide-top">
+            <div class="disTxt">Discover with BeakReads</div>
+            <div class="disTXT">Browse academic journal from all major disciplines</div>
+        </div>
+        <div class="slide-box">
+            <div class="btn-left" id="left-scroll"><i class="circle fa fa-angle-left"></i></div>
+            <div class="book-card">
+                <div class="inner-book" id="books">
+                    <%-include('_bookcard')%>
+                </div>
+            </div>
+            <div class="btn-left" id="right-scroll"><i class="circle fa fa-angle-right"></i></div>
+        </div>
+    </div>
+    <div class="collection">
+        <div class="disTXT disExtra">Browse academic journal from all major disciplines</div>
+        <div class="coll-inner">
+            <div class="coll-left">
+                <div class="zoo">
+                    <div class="picLeft">
+                        <img class="photo" src="/img/AntColony.webp" alt="">
+                    </div>
+                    <div class="wring-right">
+                        <div class="wringText1">Zoology</div>
+                        <div class="wringText2">Ant colonies Maintain Social Homeostasis in the Face of Decreased Density ...</div>
+                        <div class="wringText3">Interactions lie at the heart of social organization, particularly in ant societies. Interaction rates are presumed to increase with density, but there is little empirical evidence for this. We manipulated ...</div>
+                    </div>
+                </div>
+                <div class="zoo">
+                    <div class="picLeft">
+                        <img class="photo" src="/img/planet-orbits.webp" alt="">
+                    </div>
+                    <div class="wring-right">
+                        <div class="wringText1">Science</div>
+                        <div class="wringText2">Planets Orbiting Other Stars: The Search for extra-terrestrial life</div>
+                        <div class="wringText3">Since the Nobel-prize-winning discovery of planet orbiting a sun-like star, the field of extrasolar planets is undergoing a true revolution. Thousands of planets have been found, of which some may be...</div>
+                    </div>
+                </div>
+            </div>
+            <div class="coll-right">
+                <div class="picHold">
+                    <img class="photo"  src="/img/1234.webp" alt="">
+                </div>
+                <div class="txtWindow">
+                    <div class="yelTxt">Psychology</div>
+                    <div class="midtxt">Colors: The emotions and impressions they evoke</div>
+                    <div class="greyTxt">In the words of Oscar Wilde,” Mere color can speak to the soul in a thousand different ways.” I too believe that colors are an inseparable aspect of every individual’s life and play an essential role ...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wcbr">
+        <div class="beeDiv">
+            <div class="features">
+                <div class="feat-top">What can you find on BeakReads?</div>
+                <div class="feat-step">BeakReads is your online librarian made to assist your <p class="bold-grey">academic research</p></div>
+                <div class="feat-step"><p class="ptag">Enrich your research and explore millions of</p> <p class="bold-grey">quality academic journals, articles, books</p><p class="ptag"> and more all on one seamless platform.</p></div>
+                <div class="feat-step"><p class="ptag">Trusted by students, researchers, and professionals worldwide, we’re unlocking the true potential of your passion by empowering your access to academic content.</p></div>
+                <a href="/library" class="research-btn noUnder">Start researching with BeakReads</a>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="broaden-Search">
+        <div class="broadTxt">Broaden your research</div>
+        <div class="broaden-inner">
+            <div class="bsLeft">
+                <a href="/library?search=&resourceType=Social Science"   class="edCard">
+                    <img class="edImg" src="/img/social_science.png" alt="">
+                    <div class="edCardTxt">Social Science</div>
+                </a>
+                <a href="/library?search=&resourceType=Health & Medical"  class="edCard">
+                    <img class="edImg" src="/img/health_medical.png" alt="">
+                    <div class="edCardTxt">Health & Medical</div>
+                </a>
+                <a href="/library?search=&resourceType=Computer Science"  class="edCard">
+                    <img class="edImg" src="/img/computer_science.png" alt="">
+                    <div class="edCardTxt">Computer Science</div>
+                </a>
+                <a href="/library?search=&resourceType=Physics"  class="edCard">
+                    <img class="edImg" src="/img/physics.png" alt="">
+                    <div class="edCardTxt">Physics</div>
+                </a>
+                <a href="/library?search=&resourceType=Earth Science"  class="edCard">
+                    <img class="edImg" src="/img/earch_science.png" alt="">
+                    <div class="edCardTxt">Earth Science</div>
+                </a>
+                <a href="/library?search=&resourceType=Chemistry"  class="edCard">
+                    <img class="edImg" src="/img/chemistry.png" alt="">
+                    <div class="edCardTxt">Chemistry</div>
+                </a>
+            </div>
+            <div class="bsRight">
+                <a href="/library?search=&resourceType=Arts"  class="edCard">
+                    <img class="edImg" src="/img/arts.png" alt="">
+                    <div class="edCardTxt">Arts</div>
+                </a>
+                <a href="/library?search=&resourceType=Economics"  class="edCard">
+                    <img class="edImg" src="/img/economics.png" alt="">
+                    <div class="edCardTxt">Economics</div>
+                </a>
+                <a href="/library?search=&resourceType=Business"  class="edCard">
+                    <img class="edImg" src="/img/bussiness.png" alt="">
+                    <div class="edCardTxt">Business</div>
+                </a>
+                <a href="/library?search=&resourceType=Faith" class="edCard">
+                    <img class="edImg" src="/img/humanities.png" alt="">
+                    <div class="edCardTxt">Faith</div>
+                </a>
+                <a href="/library?search=&resourceType=Engineering"  class="edCard">
+                    <img class="edImg" src="/img/engineering-.png" alt="">
+                    <div class="edCardTxt">Engineering</div>
+                </a>
+                <a href="/library?search=&resourceType=Life Sciences"  class="edCard">
+                    <img class="edImg" src="/img/life_science.png" alt="">
+                    <div class="edCardTxt">Life Sciences</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="pricePlans">
+        <%-include('_plansSwitch')%>
+        
+
+        
+    </div>
+    <div class="questions">
+        <div class="inner-quest">
+            <div class="leftQuest">
+                <div class="feat-top">Frequently</div>
+                <div class="feat-top">asked questions</div>
+                <div class="yelTxt">Contact us for more info</div>
+            </div>
+            <div class="rightQuest vent">
+                <div class="quest-drop">
+                    <div class="qd">
+                        <div class="num">01</div>
+                        <div class="quesItem">What can i find on BeakReads?</div>
+                        <div class="btnPlus">+</div>
+                    </div>
+                    <div class="ddText"><p>You can find millions of academic journals, articles, books, and more! BeakReads works with world-class publishers to offer unlimited access to quality research for the price of a single research paper. BeakReads also features millions over 43 million open access publications.</p> <p class="start-link"> Start researching now !</p></div>
+                </div>
+                <div class="quest-drop">
+                    <div class="qd">
+                        <div class="num">02</div>
+                        <div class="quesItem">Can I find citations for my academic research on BeakReads?</div>
+                        <div class="btnPlus">+</div>
+                    </div>
+                    <div class="ddText"><p>Yes, you can! You can easily copy and paste citations as you read with the click of a button.</p></div>
+                </div><div class="quest-drop">
+                    <div class="qd">
+                        <div class="num">03</div>
+                        <div class="quesItem">Does BeakReads cover all academic disciplines?</div>
+                        <div class="btnPlus">+</div>
+                    </div>
+                    <div class="ddText"><p>Yes! You can find a wealth of research across all major academic disciplines, including medicine, health, psychology, chemistry, biology, mathematics, humanities, arts, technology, engineering, and more! <p class="start-link"> Start researching now !</p></p></div>
+                </div><div class="quest-drop">
+                    <div class="qd">
+                        <div class="num">04</div>
+                        <div class="quesItem">How do I log in to BeakReads?</div>
+                        <div class="btnPlus">+</div>
+                    </div>
+                    <div class="ddText"><p> On Zendy’s homepage, click on</p> <p class="start-link">Log in</p><p> in the upper right corner. Enter your email address and then your password to begin your research journey.</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="foot-top">
+            <div class="broadTxt ftp">Broaden your research</div>
+            <div class="newsTAlk">Join thousands of fellow knowledge enthusiasts and subscribe to our weekly newsletter for content alerts, research tips, and more.</div>
+            <div class="input-div">
+                <input class="email-field" type="text" placeholder="Enter your email address">
+                <a href="/send-email" class="join">Join</a>
+            </div>
+        </div>
+        <div class="foot-buttom">
+            <div class="foot-left">
+                <div class="fll">
+                    <div class="fl-holder">
+                        <div class="orange-title">Discover</div>
+                        <a class="below-ot">journals</a>
+                        <a class="below-ot">Proceedings</a>
+                        <a class="below-ot">Books</a>   
+                    </div>
+                    <div class="fl-holder">
+                        <div class="orange-title otl">Learn</div>
+                        <a class="below-ot">FAQs</a>
+                        <a class="below-ot">Terms of Use</a>
+                        <a class="below-ot">Privacy Policy</a>
+                    </div>
+                </div>
+                <div class="flr">
+
+                    <div class="fl-holder ">
+                        <div class="orange-title otExtra">BeakReads</div>
+                        <a class="below-ot">About</a>
+                        <a class="below-ot">Address</a>
+                        <a class="below-ot">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="foot-right">
+                <div class="exp">Explore</div>
+                <div class="fl-holderr">
+                    <div class="inner-fl">
+                        <a class="below-ot">Health & Medical</a>
+                        <a class="below-ot">Physics & Mathematics</a>
+                        <a class="below-ot">Proceedings</a>
+                        <a class="below-ot">Chemical,Material,& Earth Science</a>
+                    </div>
+                    <div class="inner-fl">
+                        <a class="below-ot">Business And Economics</a>
+                        <a class="below-ot">Arts, Humanities, & Social Sciences</a>
+                        <a class="below-ot">Engineering & Computer Science</a>
+                        <a class="below-ot">Life Sciences</a>
+                    </div>
+                </div>
+            </div>
+           <!-- link -->
+           <%-include('_mediaLinks')%>
+
+        </div>
+        <div class="footTxt">Copyright Graham E © 2023.All Rights Reserved.</div>
+    </div>
+</body>
+<script>
+
+    document.getElementById('searchButton').addEventListener('click', function() {
+        // Get the value from the input field
+        const searchQuery = document.getElementById('pt').value;
+        
+        // Construct the URL with the search query parameter
+        const url = `/library?search=${encodeURIComponent(searchQuery)}`;
+        
+        // Redirect to the library page with the search query parameter
+        window.location.href = url;
+    });
+
+</script>
+<!-- <script>
+    // Retrieve the token from local storage
+    const token = localStorage.getItem('token');
+
+    // Set 'user' object if the token is available
+    let user;
+    if (token) {
+        try {
+            // Decode the token and extract user data
+            const decodedToken = jwt.decode(token);
+            user = decodedToken;
+        } catch (error) {
+            // Handle any errors that occur during token decoding
+        }
+    }
+
+    
+</script> -->
+</html>

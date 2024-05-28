@@ -1,0 +1,311 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --edge: #232323;
+    --back: #000000;
+    --theme: #eaaa00;
+    --color: #3a3d3f;
+    --hover: #eaaa00;
+    --tcolor: #fff;
+    --yel: #34bcf0;
+    --new: #54565a;
+    --darker: #26282a;
+
+    --grey: #e1e1e1;
+    
+    --bordGrad:  linear-gradient(to right,#02aac6, #72e4cb) 1;
+    
+    
+  }
+
+  * {
+    transition: all ease-in-out 0.5s;
+    /* border: solid 1px var(--hover); */
+  }
+@font-face {
+    font-family: 'NET';
+    src: 
+         /* url('../fonts/NetflixSansBold.ttf'), */
+         /* url('../fonts/NetflixSansIcon.ttf'), */
+         url('../fonts/NetflixSansLight.ttf'),
+         /* url('../fonts/NetflixSansMedium.ttf'), */
+         /* url('../fonts/NetflixSansRegular.ttf'), */
+         url('../fonts/NetflixSansThin.ttf');
+    
+}
+
+@font-face {
+    font-family: 'BEN';
+    src: url('../fonts/NetflixSansBlack.ttf'),
+         url('../fonts/NetflixSansBold.ttf'),
+         url('../fonts/NetflixSansIcon.ttf'),
+         url('../fonts/NetflixSansLight.ttf'),
+         url('../fonts/NetflixSansMedium.ttf'),
+         url('../fonts/NetflixSansRegular.ttf'),
+         url('../fonts/NetflixSansThin.ttf');
+    
+}
+
+.foot-buttom{
+    /* border: solid 1px violet; */
+    display: flex;
+    width: 95%;
+    height: 80%;
+    flex-direction: row;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 55vh;
+    /* border: solid 1px pink; */
+    background-color: var(--darker);
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+}
+
+.loca{
+    color: var(--hover);
+}
+.linka{
+    color: var(--tcolor);
+    text-decoration: none;
+}
+
+
+
+.linka:hover{
+    color: var(--hover);
+}
+
+
+
+.black-banner{
+    display: flex;
+    /* border: solid 1px green; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 80vh;
+    width: 100%;
+    position: relative;
+}
+
+.left-ban{
+    display: flex;
+    width: 100%;
+    height: 80%;
+    /* border: solid 1px violet; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--darker );
+}
+
+.right-ban{
+    display: flex;
+    position: absolute;
+    align-self: flex-end;
+    justify-self: right;
+    /* justify-content: center; */
+    box-sizing: border-box;
+    align-items: center;
+    right: 18%;
+    width: 15%;
+    height: 80%;
+    /* border: solid 1px rgba(238, 159, 130, 0.953); */
+}
+
+.inner-left{
+    height: 80%;
+    width: 85%  ;
+}
+.about-txt{
+    font-size: 2.6vw;
+    font-family: "BEN";
+    margin-bottom: 4%;
+    width: 30%;
+    color: #fff;
+    border-bottom: 2px solid var(--tcolor);
+}
+
+.abtUS{
+    font-family: "NET";
+    font-size: 1.5vw;
+    color: #fff;
+    width: 60%;
+    height: 20%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+
+}
+
+.sign6{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15%;
+    width: 15%;
+    border-radius: 30px;
+    font-size: 1.4vw;
+    font-family: "NET";
+    cursor: pointer;
+    background-color: var(--hover);
+    color: var(--tcolor);
+}
+
+.sign6:hover{
+    background-color: #fff;
+    color: var(--hover);
+}
+
+
+.ban-pic{
+    width: 24vw;
+    height: 70vh;
+    /* border: solid 1px blue; */
+}
+
+.wrb{
+    display: flex;
+    height: 70vh;
+    width: 100%;
+    /* border: solid 1px blue; */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrbL{
+    height: 90%;
+    width: 44%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    
+}
+
+
+.wrbR{
+    height: 90%;
+    width: 44%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.wrb-inner{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-top: 10%;
+}
+
+
+.wrbLe{
+    width: 67%;
+    height: 13.5%;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "BEN";
+    font-size: 1.9vw;
+    border: solid 3px var(--hover);
+    box-shadow: 1px 1px 8px var(--new);
+    position: absolute;
+    top: 8%;
+    z-index: 1;
+    background-color: #ffffff;
+
+}
+
+.wrbLf{
+    width: 68%;
+    height: 70.5%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "BEN";
+    color: var(--new);
+    font-size: 1.3vw;
+    box-shadow: 1px 1px 8px var(--new);
+    word-spacing: 2px;
+    flex-direction: column;
+}
+
+.wrbLf p {
+    margin: 0;
+    margin-top: 1%;
+}
+
+.stacked-txt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "BEN";
+    font-size: 1.3vw;
+    color: var(--new);
+    margin-top: 4%;
+
+}
+
+.final-abt{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 5%;
+}
+
+.faLeft{
+    width: 50%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* border: solid 1px #02aac6; */
+    flex-direction: column;
+}
+
+.faRight{
+    width: 40%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: solid 1px #02aac6; */
+}
+
+.boldLeft{
+    color: var(--darker);
+    font-family: "BEN";
+    font-size: 2vw;
+}
+
+.bdlf-top{
+    color: var(--new);
+    font-family: "BEN";
+    font-size: 1.3vw;
+    display: flex;
+    width: 80%;
+    margin-top: 6%;
+}
+
+.farImg{
+    height: 100%;
+    width: 80%;
+}

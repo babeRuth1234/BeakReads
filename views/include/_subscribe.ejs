@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <script defer src="../js/all.min.js"></script>
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="/css/userOval.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="/css/paypage.css">
+    <!-- <script src="https://js.stripe.com/v3/" ></script> -->
+    <!-- <script>
+        let stripe = Stripe('<%= stripePublicKey %>');
+
+    </script>
+   <script src="../js/storeH.js" ></script> -->
+
+
+    <title>Document</title>
+</head>
+<body>
+    <%-include('_subBar')%>
+  
+    <div class="budge">
+        <div class="logo">
+            <div class="nav-img" ></div>
+        </div>
+        <div class="drop-btn " id="dpb"><i class="d-btn fa fa-bars"></i></div>
+    </div>
+    <div class="paypage1">
+        <div class="subWord">Subscribe to</div>
+        <div class="differV">
+            <div> unlock  </div>
+            <div class="match1">unlimited</div>
+        </div>
+        <div class="match1">access</div>
+    </div>
+    <div class="priceCrads">
+        <div class="priceCardL">
+            <div class="textBoArx">BeakReads Open</div>
+            <div class="textBoAr">Free</div>
+            <div class="checkDot dotExe">
+                <div class="dot foTick"></div>
+                <div class="dotTExt bre" id="carac">Access a wide range of materials from all major disciplines </div>
+            </div>
+            <div class="checkBox" id="disBox">
+                <div class="ctext">Features</div>
+                <div class="checkDot">
+                    <div class="dot"></div>
+                    <div class="dotTExt" id="carac">Acess to all disciplines </div>
+                </div>
+                <div class="checkDot">
+                    <div class="dot"></div>
+                    <div class="dotTExt" id="carac2">Search Functionalities</div>
+                </div>
+                <div class="checkDot">
+                    <div class="dot"></div>
+                    <div class="dotTExt" id="carac3">Book Filtering</div>
+                </div>
+               
+                <div class="checkDot">
+                    <div class="dot"></div>
+                    <div class="dotTExt" id="carac4">Print Book Covers </div>
+                </div>
+                <div class="checkDot">
+                    <div class="dot"></div>
+                    <div class="dotTExt" id="carac4">Download Book Covers </div>
+                </div>
+            
+                <a type="submit" class="sigClick mouka">Free BeakReads</a>
+            </div>
+        </div>
+        <%-include('_payCard')%>
+        
+    </div>
+    <div class="sigClick mouka3">
+        <div class="contchar">
+            <div class="linkya"><a href="" class="linkya2">Contact US</a><div class="linkya1">for discounted pricing for a group or to sponsor individuals</div></div>
+         within your organisation.
+        </div>
+    </div>
+
+    <div class="footer">
+        
+        <div class="foot-buttom">
+            <div class="foot-left">
+                <div class="fll">
+                    <div class="fl-holder">
+                        <div class="orange-title">Discover</div>
+                        <div class="below-ot">journals</div>
+                        <div class="below-ot">Proceedings</div>
+                        <div class="below-ot">Books</div>   
+                    </div>
+                    <div class="fl-holder">
+                        <div class="orange-title otl">Learn</div>
+                        <div class="below-ot">FAQs</div>
+                        <div class="below-ot">Terms of Use</div>
+                        <div class="below-ot">Privacy Policy</div>
+                    </div>
+                </div>
+                <div class="flr">
+
+                    <div class="fl-holder ">
+                        <div class="orange-title otExtra">BeakReads</div>
+                        <div class="below-ot">About</div>
+                        <div class="below-ot">Address</div>
+                        <div class="below-ot">Contact Us</div>
+                    </div>
+                </div>
+            </div>
+            <div class="foot-right">
+                <div class="exp">Explore</div>
+                <div class="fl-holderr">
+                    <div class="inner-fl">
+                        <div class="below-ot">Health & Medical</div>
+                        <div class="below-ot">Physics & Mathematics</div>
+                        <div class="below-ot">Proceedings</div>
+                        <div class="below-ot">Chemical,Material,& Earth Science</div>
+                    </div>
+                    <div class="inner-fl">
+                        <div class="below-ot">Business And Economics</div>
+                        <div class="below-ot">Arts, Humanities, & Social Sciences</div>
+                        <div class="below-ot">Engineering & Computer Science</div>
+                        <div class="below-ot">Life Sciences</div>
+                    </div>
+                </div>
+            </div>
+           <%-include('_mediaLinks')%>
+            
+        </div>
+        <div class="footTxt">Copyright Graham E © 2023.All Rights Reserved.</div>
+    </div>
+</body>
+<!-- <script>
+ const paymentButton = document.getElementById('paymentButton');
+const cardElement = document.getElementById('giffy');
+
+paymentButton.addEventListener('click', () => {
+  // Disable the payment button to prevent multiple clicks
+  paymentButton.disabled = true;
+  createPaymentIntent();
+});
+function createPaymentIntent() {
+  fetch('/create-payment-intent', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      amount: 1000,
+      currency: 'usd',
+    }),
+  })
+    .then(response => response.json())
+    .then(data => {
+      const clientSecret = data.clientSecret;
+      return stripe.handleCardPayment(clientSecret, {
+        payment_method: {
+          card: cardElement, // Pass the Stripe card element
+          // Add other payment method details if necessary
+        },
+      });
+    })
+    .then(result => {
+      if (result.error) {
+        console.error(result.error.message);
+        paymentButton.disabled = false;
+      } else if (result.paymentIntent && result.paymentIntent.status === 'succeeded') {
+        // Payment succeeded, handle success here
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      paymentButton.disabled = false;
+    });
+}
+
+</script> -->
+
+</html>

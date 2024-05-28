@@ -1,0 +1,39 @@
+
+<!--  -->
+
+
+<% if (user && user.PaidUser == true) { %>
+    <div class="plansInner pare">
+    
+        <div class="top-pic">
+            <video autoplay muted loop id="myVideo">
+                <source src="/videos/purple.mp4" type="video/mp4">
+            </video>
+            
+                <div class=" fonttet">
+                    <div class="feat-top Bekaer">Start listening to<p class="wanaeaw"> library tunes</p></div>
+                    <div class="midtxt Bekaer1">Music: The emotions and impressions they evoke</div>
+                    <p class="cta-txt2 Bekaer1">Discover sounds that paint emotions</p>
+                    <p class="cta-txt2 Bekaer1">on one seamless platform</p>
+                    <a href="https://www.bing.com/ck/a?!&&p=d97e0bb0affa36a9JmltdHM9MTcwMTM4ODgwMCZpZ3VpZD0xYjAwYzQyOC0yMjhmLTY0OTQtMTY5Zi1kNmNhMjM5MjY1ZmImaW5zaWQ9NTE5Nw&ptn=3&ver=2&hsh=3&fclid=1b00c428-228f-6494-169f-d6ca239265fb&psq=sites+that+provide+reading+music&u=a1aHR0cHM6Ly84dHJhY2tzLmNvbS9leHBsb3JlL3JlYWRpbmc&ntb=1" class="research-btn1 bwith">Start Listening_<i class="fa fa-play"></i></a>
+                </div>
+                
+           
+        </div>
+    </div>
+<% } else { %>
+    <div class="plansInner">
+        <div class="planLeft">
+            <div class="feat-top">Try BeakReads membership</div>
+            <div class="planList">
+                <div class="listItem"><img src="/img/checkmarksvg.svg" alt="">Get Cataloging Notifications</div>
+                <div class="listItem"><img src="/img/checkmarksvg.svg" alt="">"On the shelf" Locator</div>
+                <div class="listItem"><img src="/img/checkmarksvg.svg" alt="">Return Reminder</div>
+                <a class="memberShip" href="/Subscribe">Get Membership</a>
+            </div>
+        </div>
+        <div class="planRight">
+            <img class="mDi" src="/img/multipleDeviceImage2.png" alt="">
+        </div>
+    </div>  
+<% } %>

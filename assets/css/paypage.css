@@ -1,0 +1,292 @@
+
+*{
+    /* border: solid 1px red; */
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+:root {
+    --edge: #232323;
+    --back: #000000;
+    --theme: #eaaa00;
+    --color: #3a3d3f;
+    --hover: #eaaa00;
+    --tcolor: #fff;
+    --yel: #34bcf0;
+    --new: #54565a;
+    --darker: #26282a;
+
+    --grey: #e1e1e1;
+    
+    --bordGrad:  linear-gradient(to right,#02aac6, #72e4cb) 1;
+    
+    
+  }
+
+@font-face {
+    font-family: 'NET';
+    src: 
+         /* url('../fonts/NetflixSansBold.ttf'), */
+         /* url('../fonts/NetflixSansIcon.ttf'), */
+         url('../fonts/NetflixSansLight.ttf'),
+         /* url('../fonts/NetflixSansMedium.ttf'), */
+         /* url('../fonts/NetflixSansRegular.ttf'), */
+         url('../fonts/NetflixSansThin.ttf');
+    
+}
+
+@font-face {
+    font-family: 'BEN';
+    src: url('../fonts/NetflixSansBlack.ttf'),
+         url('../fonts/NetflixSansBold.ttf'),
+         url('../fonts/NetflixSansIcon.ttf'),
+         url('../fonts/NetflixSansLight.ttf'),
+         url('../fonts/NetflixSansMedium.ttf'),
+         url('../fonts/NetflixSansRegular.ttf'),
+         url('../fonts/NetflixSansThin.ttf');
+    
+}
+
+.paypage1{
+    padding-top: 6%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 35vh;
+}
+
+.subWord{
+    font-family: "NET";
+    color: var(--edge);
+    font-size: 5vw;
+    font-weight: 700;
+}
+
+.differV{
+    font-family: "NET";
+    font-size: 5vw;
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    color: var(--edge);
+    gap: 2%;
+
+}
+.match1{
+    font-family: "NET";
+    font-size: 5vw;
+    font-weight: 700;
+    color: var(--hover);
+}
+
+.priceCrads{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    gap: 3%;
+    align-items: center;
+}
+
+.priceCardL{
+    width: 33%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    padding-top: 1%;
+    gap: 3%;
+    border: solid 1.5px var(--theme);
+    border-radius: 18px;
+}
+
+.textBoArx{
+    height: 6%;
+    width: 80%;
+    text-align: left;
+    color: var(--hover);
+    font-family: "NET";
+    font-weight: 600;
+    font-size: 1.3vw;
+}
+.checkBox{
+    gap: 10%;
+    width: 80%;
+
+}
+
+.dotExe{
+    display: flex;
+    width: 80%;
+    height: 10vh;
+    text-align: left;
+    align-items: left;
+    justify-content: left;
+    
+}
+
+.ctext{
+    color: var(--edge);
+    font-family: "NET";
+    font-weight: 900;
+    font-size: 1.3vw;
+}
+
+.textBoAr{
+    color: var(--edge);
+    text-align: left;
+    width: 80%;
+    font-family: "NET";
+    font-size: 1.7vw;
+
+
+}
+
+.dotTExt{
+    color: var(--back);
+    font-size: 1.1vw;
+    font-weight: 700;
+}
+
+
+.checkDot{
+    display: flex;
+    flex-direction: row;
+    align-items: center ;
+    text-align: center;
+
+}
+
+.dot{
+
+    width: 5%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image: url('../img/icons8-instagram-check-mark-50.png');
+    background-size: contain;
+    background-position: center;
+}
+
+.bre{
+    text-align: left;
+}
+
+.foTick{
+    width: 6%;
+}
+
+.mouka{
+    display: flex;
+    padding: 3%;
+    width: 94%;
+    background-color: #ebd8a3;
+    border: solid 1px var(--hover);
+    color: var(--color);
+    margin-top: 15%;
+}
+
+.mouka1{
+    display: flex;
+    padding: 3.4%;
+    width: 94%;
+    background-color: var(--hover);
+   
+}
+
+.mouka3{
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    
+    padding: 2%;
+    width: 36%;
+    background-color: #ebd8a3; 
+    margin-bottom: 2%;
+    color: var(--new);
+    cursor: default;
+    border: 1px;
+    font-weight: 300;
+    font-size: 1vw;
+
+}
+.mouka3:hover{
+    background-color: #ebd8a3;
+    color: #54565a;
+    border: 1px;
+    /* width: 60%; */
+}
+
+.linkya{
+    /* width: 1vw; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+}
+.linkya2{
+    width: 17%;
+    text-decoration: none;
+    color: var(--hover);
+}
+.linkya1{
+    width: 84%;
+}
+.plousa{
+    gap: 0%;
+}
+
+.contchar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.nav-bar {
+    /* border: solid 3px blue;   */
+    position: relative;
+    height: 9vh;
+    width: 100%;
+    /* margin-top: 1.2%; */
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+    justify-content: center;
+    box-sizing: border-box;
+    /* z-index: 3; */
+    border-bottom: solid 2px white;
+    box-shadow: 2px 1px 10px white;
+    /* border-radius: 8px; */
+    border-bottom: solid 1px var(--hover);
+   
+    
+}
+
+.howerr{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    width: 100%;
+    height: 100%;
+}
+
+.howerr{
+    width: 100vh;
+    height: 100vh;
+}

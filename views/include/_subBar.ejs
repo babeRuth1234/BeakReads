@@ -1,0 +1,20 @@
+<div class="nav-bar" id="navi">
+    <div class="nav-left">
+        <a class="nav-img" href="/" ></a>
+        <div class="name ">eakReads</div>
+    </div>
+    <div class="nav-right">
+        <div class="nav-link "><a class="cont-link" href="/about-page">About</a></div>
+        <div class="nav-link "><a class="cont-link" href="/library">Library</a></div>
+        <div class="nav-link "><a class="cont-link" href="">Library Tunes</a></div>
+        <% if (user && user.FirstName) { %>
+            <a class="userCircle" href="/user">
+                <img src="<%= user.ProfilePic %>" alt="" class="useroval">
+                <div class="userFname"><%= user.FirstName %></div>
+            </a>
+        <% } else { %>
+            <div class="log-in in "><a class="tos tos2" href="/login">LOG IN</a></div>
+            <div class="log-in "><a class="tos" href="/register">SIGN UP</a></div>  
+        <% } %>
+    </div>
+</div>

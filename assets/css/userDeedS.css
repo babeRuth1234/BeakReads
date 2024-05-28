@@ -1,0 +1,154 @@
+/* body{
+    background-image: url(../img/banner-2022.webp);
+} */
+:root {
+    --edge: #232323;
+    --back: #000000;
+    --theme: #eaaa00;
+    --color: #3a3d3f;
+    --hover: #eaaa00;
+    --tcolor: #fff;
+    --yel: #34bcf0;
+    --new: #54565a;
+    --darker: #26282a;
+
+    --grey: #e1e1e1;
+    
+    --bordGrad:  linear-gradient(to right,#02aac6, #72e4cb) 1;
+    
+    
+  }
+
+@font-face {
+    font-family: 'NET';
+    src: 
+         /* url('../fonts/NetflixSansBold.ttf'), */
+         /* url('../fonts/NetflixSansIcon.ttf'), */
+         url('../fonts/NetflixSansLight.ttf'),
+         /* url('../fonts/NetflixSansMedium.ttf'), */
+         /* url('../fonts/NetflixSansRegular.ttf'), */
+         url('../fonts/NetflixSansThin.ttf');
+    
+}
+
+@font-face {
+    font-family: 'BEN';
+    src: url('../fonts/NetflixSansBlack.ttf'),
+         url('../fonts/NetflixSansBold.ttf'),
+         url('../fonts/NetflixSansIcon.ttf'),
+         url('../fonts/NetflixSansLight.ttf'),
+         url('../fonts/NetflixSansMedium.ttf'),
+         url('../fonts/NetflixSansRegular.ttf'),
+         url('../fonts/NetflixSansThin.ttf');
+    
+}
+
+.smartBox{
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    width: 80%;
+    /* border: solid 2px hotpink; */
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.leftSmartBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    width: 47%;
+    /* border: solid 2px rgb(105, 115, 255); */
+    height: fit-content;
+}
+
+
+.smartBOUX{
+    flex-direction: column;
+}
+
+.toBereturned{
+    width: 95%;
+} 
+
+.countdown-timer{
+    height: 20vh;
+    width: 20vh;
+    /* border: solid 2px red; */
+}
+
+.boxes3{
+    margin-top: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+    height: 85vh;
+    /* border: solid 3px red; */
+    
+
+}
+.boxes2{
+    display: flex;
+    justify-content: center;
+    background: url("../img/2303.w061.n005.115B.p1.115.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+    align-items: center;
+    width: 32%;
+    height: 40%;
+}
+
+.boxes0{
+    display: flex;
+    justify-content: center;
+    background: url("../img/2303.w061.n005.115B.p1.115.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+    align-items: center;
+    width: 32%;
+    height: 40%;
+    color: var(--back);
+    font-family: "BEN";
+    font-size: 7vw;
+}
+.boxes1{
+    display: flex;
+    justify-content: center;
+    background: url("../img/2328.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+    align-items: center;
+    width: 32%;
+    height: 40%;
+    color: var(--hover);
+    font-family: "BEN";
+    font-size: 7vw;
+}
+
+.boxes2{
+    display: flex;
+    justify-content: center;
+    background: url("../img/library-with-books.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+    align-items: center;
+    width: 32%;
+    height: 40%;
+    color: var(--hover);
+    font-family: "BEN";
+    font-size: 7vw;
+}
+
+
+.extraShf{
+    display: flex;
+    justify-content: center;
+    align-items: last baseline;
+}

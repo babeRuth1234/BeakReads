@@ -1,0 +1,25 @@
+<% if (users && users.length > 0) { %>
+  <% users.forEach(user => { %>
+    <a href="/user-details?id=<%= user._id %>" class="userDetails-card-info2 usher">
+      <div class="jackAlign highDay"><%= user.libraryCard %></div>
+      <div class="jackAlign jackline"><img class="user-tap-icon" src="<%= user.ProfilePic || '/img/IMG-20230203-WA0003.jpg' %>" alt=""></div>
+      <div class="jackAlign highDay"><%= user.Gender %></div>
+      <div class="jackAlign highDay"><%= user.FirstName %></div>
+      <div class="jackAlign coveredUp"><%= user.PaidUser %></div>
+      <div class="jackAlign highDay"><%= user.BorrowedBooks.length %></div>
+    </a>
+  <% }) %>
+<% } else if (usersq && usersq.length > 0) { %>
+  <% for (var i = 0; i < usersq.length; i++) { %>
+    <a href="/user-details?id=<%= usersq[i]._id %>" class="userDetails-card-info2 usher">
+      <div class="jackAlign highDay"><%= usersq[i].libraryCard %></div>
+      <div class="jackAlign jackline"><img class="user-tap-icon" src="<%= usersq[i].ProfilePic || '/img/IMG-20230203-WA0003.jpg' %>" alt=""></div>
+      <div class="jackAlign highDay"><%= usersq[i].Gender %></div>
+      <div class="jackAlign highDay"><%= usersq[i].FirstName %></div>
+      <div class="jackAlign coveredUp"><%= usersq[i].PaidUser %></div>
+      <div class="jackAlign highDay"><%= usersq[i].BorrowedBooks.length %></div>
+    </a>
+  <% } %>
+<% } else { %>
+  <p>No users found</p>
+<% } %>

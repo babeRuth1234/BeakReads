@@ -1,0 +1,28 @@
+<% if (books && books.length > 0) { %>
+    <% books.forEach(book => { %>
+   
+      <a href="/library?bookCha=<%= book._id %>" class="slider noUnder" style="background-image: url('<%= book.BookCover %>');">
+        <div class="book-dtl">
+          <div class="book-budge"><p class="book-budge-txt">benny </p></div>
+          <div class="nameDts"><p class="nametxt"> <% const maxLength = 15; // Set your desired maximum length %>
+            <% if (book.Source.length > maxLength) { %>
+                <%= book.Source.substring(0, maxLength) + '...' %>
+            <% } else { %>
+                <%= book.Source %>
+            <% } %></p></div>
+          <div class="date"><p class="nametxt"><% const maxLengths = 15; // Set your desired maximum length %>
+            <% if (book.ResourceType.length > maxLengths) { %>
+                <%= book.ResourceType.substring(0, maxLengths) + '...' %>
+            <% } else { %>
+                <%= book.ResourceType %>
+            <% } %></p></div>
+        </div>
+      </a>
+    <% }) %>
+  <% } else { %>
+    <div class="lib-det-card bookReo winnewwd">
+      <img class="user-img tweak" src="../img/undraw_no_data_re_kwbl.svg" alt="user image">
+      <p class="viewPic8">No books found for the given criteria.</p>
+    </div>
+  <% } %>
+  

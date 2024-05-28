@@ -1,0 +1,235 @@
+@media screen and (max-width: 714px) {
+    
+  * {
+    transition: all ease-in-out 0.5s;
+    /* border: solid 1px green; */
+    }
+
+    .black-banner{
+        display: flex;
+        /* border: solid 1px green; */
+        padding-top: 9vw;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        height: 70vh;
+        width: 100%;
+        /* position: relative; */
+    }
+
+    .left-ban{
+        display: flex;
+        width: 100%;
+        height: 50%;
+        /* border: solid 1px violet; */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--darker );
+    }
+    
+    .about-txt{
+      font-size: 4vw;
+      width: 50%;
+
+    }
+    
+    .foot-buttom{
+      /* border: solid 1px violet; */
+      display: flex;
+      width: 95%;
+      height: 80%;
+      flex-direction: column;
+    }
+    .abtUS{
+      font-family: "NET";
+      font-size: 3vw;
+      color: #fff;
+      width: 80%;
+      height: 25%;
+      margin-bottom: 1%;
+      margin-top: 1%;
+
+    }
+
+
+    .sign6{
+      height: 19%;
+      width: 35%;
+      font-size: 3vw;
+
+    }
+
+    
+    .wrb{
+      height: 50vh;
+      width: 100%;
+      /* border: solid 1px blue; */
+      flex-direction: column;
+      
+    }
+
+    .wrb-inner{
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      height: 80%;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0%;
+    }
+  
+
+    .wrbL{
+      height: 50%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      
+    }
+
+    .wrbR{
+      height: 50%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .inner-left{
+      height: 80%;
+      width: 85%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0%;
+    }
+
+    .right-ban{
+      display: flex;
+      position: relative;
+      align-self: center;
+      justify-self: center;
+      justify-content: center;
+      box-sizing: border-box;
+      align-items: center;
+      right: 0%;
+      width: 100%;
+      height: fit-content;
+      background-color: var(--darker );
+
+      /* border: solid 1px rgba(238, 159, 130, 0.953); */
+  }
+
+  .ban-pic{
+    width: 35vw;
+    height: 40vh;
+    /* border: solid 1px blue; */
+  }
+
+  .wrbLe{
+    top: 3%;
+    font-size: 3vw;
+  }
+
+  .stacked-txt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "BEN";
+    font-size: 3vw;
+    color: var(--new);
+    margin-top: 2%;
+
+  }
+
+  .final-abt{
+    flex-direction: column-reverse;
+    height: 45vh;
+
+  }
+
+  .footer{
+    width: 100%;
+    height: 65vh;
+  }
+  .soci {
+    cursor: pointer;
+    border-radius: 10px;
+    /* padding: 2%; */
+    display: flex;
+    height: 50%;
+    border: solid 3px transparent;
+}
+  
+.socialMed{
+  width: 80%;
+  height: 10%;
+  margin-top: 6%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 3.7%;
+  align-items: center;
+}
+
+  .faLeft{
+    width: 80%;
+    height: 80%;
+  }
+
+  .faRight{
+    width: 80%;
+    height: 80%;
+    /* border: solid 1px #02aac6; */
+  }
+
+  .faLeft{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: solid 1px #02aac6; */
+    flex-direction: column;
+  }
+
+  .boldLeft{
+    color: var(--darker);
+    font-family: "BEN";
+    font-size: 3vw;
+  }
+
+  .bdlf-top{
+    font-size: 3vw;
+    width: 100%;
+
+  }
+  
+
+
+  .wrbLf{
+    padding-top: 5%;
+    width: 80%;
+    height: 80.5%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "BEN";
+    color: var(--new);
+    font-size: 3vw;
+    box-shadow: 1px 1px 8px var(--new);
+    word-spacing: 2px;
+    flex-direction: column;
+  }
+  
+
+
+}

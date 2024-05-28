@@ -1,0 +1,698 @@
+@media screen and (max-width: 714px) {
+    *{
+        /* border: solid 1px red;    */
+    }
+    .nav-bar {
+       flex-direction: column;
+       height: 50vh;
+       padding-bottom: 2%;
+       box-shadow: 1px 2px 10px black;
+       visibility: hidden;
+        
+    }
+
+    
+
+    .budge{
+        visibility: visible;
+        z-index: 4;
+        justify-content: space-between;
+        transition: ease-in-out 0.5s;
+    }
+    .drop-btn{
+
+        display: flex;
+        justify-content: flex-end;
+       
+    }
+
+    .inner-book{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        overflow-x: scroll;
+        width: 100%;
+        height: 100%;
+        /* border: solid green; */
+        gap: 10%;
+        scroll-behavior: smooth;
+        
+    }
+    .slider{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .d-btn{
+        display: flex;
+        justify-self: flex-end;
+        width: 30%;
+        padding: 0%;
+    }
+
+    .top-pic {
+        height: 60vh;
+    }
+    
+    .cta-inp{
+        width: 80%;
+        height: 14%;
+    }
+
+ 
+    .nav-img {
+        width: 80%;
+        height: 70%;
+    background-position: left;
+
+    }
+
+    .cta-txt2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        
+    }
+    .cta-txt{
+        font-size: 8.8vw;
+    }
+    .src-icon{
+        font-size: 5vw;
+    }
+    .cta-input::placeholder{
+        font-size: 3vw;
+        
+        
+    }
+    .cta-input{
+        font-size: 5vw;
+    }
+    .cta-srcha{
+        width: 20%;
+        height: 96%;
+
+    }
+    .nav-left{
+        justify-content: center;
+        height: 20%;
+
+    }
+
+    .nav-right{
+        width: 100%;
+        flex-direction: column;
+        gap: 2%;
+
+    }
+
+    .nav-link {
+        font-family: 'NET';
+        font-size: 6vw;
+        font-weight: 600;
+        width: 50%;
+        height: 80%;
+        /* border: solid 2px green; */
+    }
+
+    .und-txt{      
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .log-in{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 50%;
+        font-family: 'BEN';
+        font-size: 1.3;
+        /* font-weight: 600; */
+        border: solid 2px #3a3d3f;
+        border-radius: 6px;
+        margin-right: 2%;
+        box-sizing: border-box;
+    }
+
+    .inbtw{
+        border: none;
+    }
+    .stat-Right{
+        width: 90%;
+        height: 90%;
+        flex-direction: column;
+        /* border: solid 1px yellowgreen; */
+    }
+
+    .stat-Left{
+        width: 90%;
+        height: 90%;
+        flex-direction: column;
+        border-right: solid 1px var(--back);
+
+    }
+
+    .num1 {
+        font-size: 6.8vw;
+    }
+    .num2 {
+        font-size: 6.8vw;
+    }
+    .num3 {
+        font-size: 6.8vw;
+    }
+    .num4 {
+        font-size: 6.8vw;
+    }
+
+    .extra-txt{
+        display: flex;
+        width: 38vw;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .boastHold{
+        flex-direction: column;
+        height: 55vh;
+        
+    }
+
+    .boastTxt{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 30%;
+        color: var(--color);
+        font-family: "NET";
+        text-align: center;
+    }
+
+    .cell{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 50%;
+    }
+    
+    
+    .boastCard-left {
+        width: 100%;
+
+    }
+
+    .imgBst{
+        width: 60%;
+        height: 60%;
+    }
+
+    .boastCard-Right {
+        width: 100%;
+
+    }
+    .disTxt{
+        font-size: 7vw;
+    }
+    .disTXT{
+        font-size: 4vw;
+    }
+    .nametxt{
+        font-size: 3.7vw;
+    }
+    .coll-inner{
+        display: flex;
+        /* border: solid 3px blue; */
+        width: 100%;
+        height: 90%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .book-dtl{
+        border-radius: 0px;
+    }
+    .book-budge-txt{
+        padding-left: 120px;
+        padding-right: 120px;
+        color: transparent;
+    }
+
+    .date{
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    
+    .disExtra{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 10%;
+    }
+    .coll-left{
+        justify-content: space-evenly;
+        height: 66.6%;
+        width: 100%;
+        gap: 2%;
+
+    }
+
+    .collection{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 65vh;
+        /* border: solid 1px yellow; */
+    }
+
+    .zoo{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        width: 98%;
+        height: 46.3%;
+        /* border-bottom: solid 1px #e1e1e1; */
+    }
+    .wringText2{
+        font-size: 3vw;
+    }
+
+    .midtxt{
+      
+        font-size: 3vw;
+    }
+    .wringText3{
+        font-size: 2.5vw;
+    }
+
+    .greyTxt{
+
+        font-size: 2.5vw;
+
+    }
+
+    .picLeft{
+        width: 30%;
+    }
+    
+    .coll-right{
+        display: flex;
+        /* justify-content: center; */
+        align-items: flex-start;
+        flex-direction: row;
+        height: 70%;
+        width: 100%;
+        padding-left: 1%;
+        /* gap: 2; */
+        /* border: solid 1px rgb(205, 55, 50); */
+    }
+
+
+  
+    
+    .picHold{
+        display: flex;
+        width: 30%;
+        height: 46.3%;
+        align-items: left;
+        justify-content: left;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .photo{
+        display: flex;
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+
+    }    
+    .stat-bHold{
+        margin-top: 5%;
+    }
+
+    .wring-right{
+        display: flex;
+        align-items: left;
+        justify-content: center;
+        flex-direction: column;
+        /* border: solid 1px tomato; */
+        margin-left: 2%;
+        width: 75%;
+        height: 100%;
+    }
+    
+    .txtWindow{
+        width: 75%;
+        height: 46.3%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 2%;
+    }
+    .beeDiv{
+        display: flex;
+        width: 95%;
+        height: 100%;
+        justify-content: center;
+        align-items:  flex-end ;
+        /* border: solid 1px rgb(128, 0, 0); */
+        background-image: url(/img/bgWhatZendyMobile.webp);
+        background-position: top;
+       
+    }
+
+    .features{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 70%;
+        /* padding-top: 10%; */
+        width: 90%;
+        /* border: solid 1px white; */
+        /* gap: 2%; */
+        justify-content: space-evenly;
+    }
+    
+    .wcbr{
+        display: flex;
+        width: 100%;
+        height: 80vh;
+        justify-content: center;
+        align-items: center;
+        /* border: solid 1px green; */
+    }
+
+    .feat-top{
+        font-size: 5vw;
+    }
+
+    
+
+    .feat-step{
+        color: var(--new);
+        font-family: "NET";
+        font-size: 3.4vw;
+
+        width: 97%;
+        height: fit-content;
+        padding: 0;
+    
+    }
+
+    .research-btn{
+        display: flex;
+        /* justify-self: center;
+        align-self: center; */
+        justify-content: center;
+        align-items: center;
+        /* border: solid red 1px; */
+        /* margin-left: 8%; */
+        border-radius: 20px;
+        background-color: var(--new);
+        font-family: "NET";
+        font-size: 2.4vw;
+        color: #fff;
+        height: 11%;
+        width: 50%;
+        box-shadow: 0px 5px 16px black;
+    
+    }
+    .features .research-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    
+    .bsLeft{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        /* border: solid red 1px; */
+        gap: 2%;
+    }
+
+    .bsRight{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        /* border: solid red 1px; */
+        gap: 2%;
+    }
+    
+    .broaden-inner{
+        display: flex;
+        flex-direction: row;
+        height: 90%;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        /* border: solid 1px blueviolet; */
+        gap: 4%;
+    }
+
+    .broaden-Search{
+        /* border: solid 1px purple; */
+        height: 130vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .broadTxt{
+        font-size: 7vw;
+        margin-bottom: 8%;
+    }
+    .edCard{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* border: solid 1px red; */
+        width: 80%;
+        height: 100%;
+        gap: 5%;
+        /* border: solid 0.2px var(--new); */
+        box-shadow: 0px 2px 5px var(--new);
+        border-radius: 14px;
+    
+    }
+
+    .edImg{
+        display: flex;
+        width: 50%;
+        height: 27%;
+    }
+    
+    .edCardTxt{
+        font-size: 1.3vw;
+        font-family: "NET";
+        color: var(--new);
+    
+    }
+
+    .pricePlans{
+        height: 75vh;
+        /* border: solid 1px blue; */
+    }
+
+    .plansInner{
+        display: flex;
+        height: 90%;
+        width: 95%;
+     
+        flex-direction: column-reverse;
+    }
+
+    .planLeft{
+        width: 95%;
+        height: 50%;
+
+    }
+    
+    .planRight{
+        width: 95%;
+        height: 50%;
+    }
+    .listItem{
+        font-size: 3.5vw;
+        font-family: "NET";
+        color: var(--new);
+        display: flex;
+        gap: 2%;
+    
+    }
+
+    .memberShip{
+        font-size: 3.3vw;
+        font-weight: 400;
+
+    }
+
+    .edCardTxt{
+        font-size: 4vw;
+    }
+    
+    .edImg{
+        display: flex;
+        width: 30%;
+        height: 40%;
+    }
+
+    .quesItem{   
+        font-size: 3vw;
+    }
+
+    .btnPlus{
+        font-size: 5vw;
+        /* border: solid rgb(0, 51, 255) 1px; */
+    }
+
+    .newsTAlk{
+        width: 100%;
+        font-size: 3vw;
+        text-align: center;
+    }
+
+    .input-div{
+        width: 100%;
+        height: 23%;
+    }
+    
+    .email-field::placeholder{
+        font-size: 4vw;    
+    }
+
+    .join{
+        font-size: 4vw;
+    }
+
+    .foot-buttom{
+        /* border: solid 1px violet; */
+        display: flex;
+        width: 95%;
+        height: 55%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .socialMed{
+        width: 100%;
+        height: 8%;
+        flex-direction: row;
+
+    }
+
+    .foot-left{
+        display: flex;
+        width: 100%;
+        height: 100%;
+
+    }
+    .foot-right{
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+
+    
+    .orange-title{
+        font-size: 4vw;
+    }
+
+    
+    .below-ot{
+        font-family: "NET";
+        font-size: 3vw;
+        /* margin-top: 0.2vh; */
+        color: #ffffff;
+
+        /* margin-bottom: 5%; */
+    }
+
+    .exp{
+        font-size: 3vw;
+        width: 100%;
+    }
+
+    .footer{
+        width: 100%;
+        height: 120vh;
+    }
+
+      .soci {
+        cursor: pointer;
+        border-radius: 10px;
+        /* padding: 2%; */
+        display: flex;
+        height: 50%;
+        border: solid 3px transparent;
+    }
+      
+    .socialMed{
+      width: 80%;
+      height: 10%;
+      margin-top: 6%;
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      gap: 3.7%;
+      align-items: center;
+    }
+
+    .footTxt{
+        border-top: solid 1px #fff;
+        height: 3.6%;
+        width: 80%;
+        font-size: 2.6vw;
+    }
+
+    .userCircle{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 35%;
+        width: 70%;
+        padding: 0.2%;
+        padding-right: 0.7%;
+        gap: 5%;
+        border-radius: 60px;
+        border: solid 2px #eaaa00;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    
+    .lib-card{
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: fit-content;
+        background-color: #e8e9ed;
+        margin-top: 10vh;
+        padding-bottom: 18vh;
+        gap: 8px;
+    }
+}
+
+.my-class{
+    visibility: visible;
+}

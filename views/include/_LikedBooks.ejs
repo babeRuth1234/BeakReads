@@ -1,0 +1,33 @@
+<% likedBooksDetails.forEach(book => { %>
+<div class="toBereturned" id="likedBooksSection">
+    <div class="covHolder">
+        <img class="user-img" src="../img/undraw_bookshelves_re_lxoy (1).svg" alt="user image">
+    </div>
+    <div class="dented-det">
+        <div class="Divname UserName"><%= book.Source %></div>
+        <div class="bookLaws"><%= book.Author %></div>
+        <div class="stars">
+            <i class=" fa fa-star"></i>
+            <i class=" fa fa-star"></i>
+            <i class=" fa fa-star"></i>
+            <i class=" fa fa-star"></i>
+            <i class=" fa fa-star-half-stroke"></i>
+        </div>
+        <div class="bookLaws tinyFont">
+            <% const maxLength = 40; // Set your desired maximum length %>
+            <% if (book.About.length > maxLength) { %>
+                <%= book.About.substring(0, maxLength) + '...' %>
+            <% } else { %>
+                <%= book.About %>
+            <% } %>
+        </div>
+        <div class="humanActions">
+            <div class="viewPic">view details</div>
+            <form action="/unlike-book/<%= book._id %>" method="POST">
+                <button type="submit" class="req-book">Cancel</button>
+            </form>
+        </div>
+
+    </div>
+</div>
+<% }) %>

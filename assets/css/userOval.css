@@ -1,0 +1,199 @@
+
+:root {
+    --edge: #232323;
+    --back: #000000;
+    --theme: #eaaa00;
+    --color: #3a3d3f;
+    --hover: #eaaa00;
+    --tcolor: #fff;
+    --yel: #34bcf0;
+    --new: #54565a;
+    --darker: #26282a;
+
+    --grey: #e1e1e1;
+    
+    --bordGrad:  linear-gradient(to right,#02aac6, #72e4cb) 1;
+    
+    
+  }
+
+  * {
+    transition: all ease-in-out 0.5s;
+    /* border: solid 1px rgb(68, 5, 241); */
+  }
+@font-face {
+    font-family: 'NET';
+    src: 
+         /* url('../fonts/NetflixSansBold.ttf'), */
+         /* url('../fonts/NetflixSansIcon.ttf'), */
+         url('../fonts/NetflixSansLight.ttf'),
+         /* url('../fonts/NetflixSansMedium.ttf'), */
+         /* url('../fonts/NetflixSansRegular.ttf'), */
+         url('../fonts/NetflixSansThin.ttf');
+    
+}
+
+@font-face {
+    font-family: 'BEN';
+    src: url('../fonts/NetflixSansBlack.ttf'),
+         url('../fonts/NetflixSansBold.ttf'),
+         url('../fonts/NetflixSansIcon.ttf'),
+         url('../fonts/NetflixSansLight.ttf'),
+         url('../fonts/NetflixSansMedium.ttf'),
+         url('../fonts/NetflixSansRegular.ttf'),
+         url('../fonts/NetflixSansThin.ttf');
+    
+}
+
+.userCircle{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 85%;
+    width: fit-content;
+    padding: 0.2%;
+    padding-right: 0.7%;
+    gap: 5%;
+    border-radius: 60px;
+    border: solid 2px #eaaa00;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+.useroval{
+    display: flex;
+    justify-content: center;
+    width: 26%;
+    height: 90%;
+    border-radius: 60px;
+    border: solid 1.6px #eaaa00;
+    margin-left: 2%;
+}
+
+.userFname{
+    display: flex;
+    font-size: 1.7vw;
+    font-family: "BEN";
+    align-items: center;
+    justify-content: center;
+    color: var(--edge);
+}
+
+.viewPic8{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "NET";
+    color: var(--tcolor);
+    border-radius: 5px;
+    background-color: var(--hover);
+    font-size: 1.1vw;
+    padding: 1.5vh 2vh 1.5vh 2vh;
+    border: solid 1px var(--hover);
+    cursor: default;
+  }
+
+.pare{
+  background-color: transparent;
+  color: var(--hover);
+}
+
+.proEx{
+  justify-content: flex-start;
+}
+
+.fonttet{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  /* justify-content: baseline; */
+  align-items: flex-start;
+  /* margin-top: 7%; */
+
+}
+.bwith{
+  color: var(--hover);
+  width: 20%;
+  text-decoration: none;
+}
+
+.Bekaer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  color: var(--tcolor);
+  width: 20%;
+  gap: 1%;
+  margin-left: -8%;
+  font-size: 4vw;
+  /* margin-top: 5%; */
+  width: 80%;
+
+  /* height: 40%; */
+ 
+}
+
+.Bekaer1{
+  font-size: 2vw;
+  margin-left: 2%;
+  color: var(--tcolor);
+  
+}
+
+.features1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 90%;
+  /* padding-top: 10%; */
+  width: 45%;
+  /* border: solid 1px white; */
+  /* gap: 2%; */
+  /* justify-content: space-evenly; */
+}
+
+.research-btn1{
+  display: flex;
+  /* justify-self: flex-start; */
+  /* align-self: first baseline; */
+  justify-content: center;
+  align-items: center;
+  /* border: solid red 1px; */
+  margin-left: 2%;
+  border-radius: 25px;
+  background-color: var(--back);
+  font-family: "NET";
+  font-size: 1.3vw;
+  color: #fff;
+  height: 10vh;
+  width: 25%;
+  box-shadow: 0px 5px 16px black;
+  cursor: pointer;
+  margin-bottom: 5%;
+  margin-top: 1%;
+  border: solid 2px var(--hover);
+}
+
+.research-btn1:hover{
+  display: flex;
+  /* justify-self: flex-start; */
+  /* align-self: first baseline; */
+  justify-content: center;
+  align-items: center;
+  /* border: solid red 1px; */
+  margin-left: 2%;
+  border-radius: 25px;
+  background-color: var(--tcolor);
+  color: var(--back);
+  text-decoration: none;
+}
+
+.wanaeaw{
+  color: var(--hover);
+  text-decoration: none;
+
+}

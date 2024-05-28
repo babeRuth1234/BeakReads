@@ -1,0 +1,44 @@
+<% borrowedBooksDetails.forEach(book => { %>
+  <div class="toBereturned" id="borrowedBooksSection">
+    <div class="covHolder">
+      <img class="user-img" src="/<%= book.BookCover %>" alt="user image">
+    </div>
+    <div class="bokreSched">
+      <div class="Divname di1">
+        <p class="UserName na1"><%= book.Source %></p>
+      </div>
+      <div class="countdown-timer" data-timestamp="<%= book.borrowedTimestamp %>">
+        <span class="countdown" data-timestamp="<%= book.borrowedTimestamp %>">
+          Time remaining: Loading...
+        </span>
+      </div>
+      <form action="/return-book/<%= user.Id %>/<%= book.Id %>" method="post">
+        <!-- Add a button or link to initiate the return process -->
+        <button type="submit">Return Book</button>
+      </form>
+    </div>
+  </div>
+<% }) %>
+
+<script>
+  const countdownElements = document.querySelectorAll('.countdown');
+
+  countdownElements.forEach(element => {
+    const timestamp = parseInt(element.dataset.timestamp, 10); // Get the timestamp from the HTML data attribute
+
+    const countdown = setInterval(() => {
+      const currentTime = Math.floor(Date.now() / 1000); // Get current time in seconds
+      const timeRemaining = timestamp - currentTime;
+
+      if (timeRemaining > 0) {
+        const minutes = Math.floor(timeRemaining / 60);
+        const seconds = Math.floor(timeRemaining % 60);
+
+        element.textContent = `Time remaining: ${minutes}m ${seconds}s`;
+      } else {
+        clearInterval(countdown);
+        element.textContent = 'Time is up!';
+      }
+    }, 1000); // Update the timer every second (1000 milliseconds)
+  });
+</script>

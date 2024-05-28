@@ -1,0 +1,63 @@
+
+
+<% if (books.length > 0) { %>
+    <% books.forEach(book => { %>
+      <div class="lib-det-card bookReo"  >
+        <div class="book-long-title"><%= book.Source %></div>
+        <div class="book-proper-details">
+          <div class="static-details">
+            <p class="author-txt">Author(s):</p>
+            <p class="author-txt">Publication year:</p>
+            <p class="author-txt">Publication title:</p>
+            <p class="author-txt">Resource type:</p>
+          </div>
+          <div class="non-static-det">
+            <p class="details-stats"><%= book.Author %></p>
+            <p class="details-stats"><%= book.Year %></p>
+            <p class="details-stats"><%= book.PublicationTitle %></p>
+            <p class="details-stats"><%= book.ResourceType %></p>
+          </div>
+        </div>
+        <div class="carryMore-details"><%= book.About %></div>
+        <div class="butCollection">
+          <a class="viewPic" href="/edit/<%= book._id %>">Edit details</a>
+
+          <a class="Shelftloca" href="/view-cover/<%= book._id %>">View Cover</a>
+        <a class="Shelftloca" href="/Locate/<%= book._id %>"> <i class="fa fa-location-pin"></i>Locate</a>
+        <form action="/delete-book/<%= book._id %>" method="POST">
+          <!-- Specify the method override field -->
+          <input type="hidden" name="_method" value="DELETE">
+          <button type="submit" class="req-book">Delete Book</button>
+        </form>
+        </div>
+      </div>
+    <% }) %>
+  <% } else { %>
+    <div class="lib-det-card bookReo"  >
+      <img class="user-img tweak" src="../img/undraw_no_data_re_kwbl.svg" alt="user image">
+      <p class="viewPic8">No books found for the given criteria.</p>
+    </div>
+  <% } %>
+  <!-- <div class="lib-det-card">
+    <div class="book-long-title">TECHNO-ECONOMIC ASSESMENT FOR DISTRIBUTED GENERATION PLACEMENT IN DISTRIBUTION SYSTEM</div>
+    <div class="book-proper-details">
+        <div class="static-details">
+            <p class="author-txt">Author(s)</p>
+            <p class="author-txt">Publication year</p>
+            <p class="author-txt">Publication title</p>
+            <p class="author-txt">Resource type</p>
+        </div>
+        <div class="non-static-det">
+            <p class="details-stats">Graham Lee, Paul David</p>
+            <p class="details-stats">2019</p>
+            <p class="details-stats">Toshiba: Journal Technology of civic, Electrical, Mechanical, Geology, Minning and urban history</p>
+            <p class="details-stats">Journal</p>
+        </div>
+    </div>
+    <div class="carryMore-details">the republic of ohio is one of the most LG mobile-user-populated cities in the world, with 89% percent of its populations mobile users accustomed to the LG mobile Phone, students of history in the alabama state university held a study that reveales that the LG brands phrase "Life's good" relates to an ohian historical greeting "tekar" meaning "Life is good"</div>
+    <div class="butCollection">
+        <div class="viewPic">Edit details</div>
+        <div class="Shelftloca"> <i class="fa fa-location-pin"></i>Locate</div>
+        <div class="req-book">Delete Book</div>
+    </div>
+</div> -->

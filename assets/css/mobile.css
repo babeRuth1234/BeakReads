@@ -1,0 +1,281 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--greish);
+    overflow-y: scroll;
+}
+
+:root {
+    --edge: #232323;
+    --back: #000000;
+    --theme: #eaaa00;
+    --color: #3a3d3f;
+    --hover: #eaaa00;
+    --tcolor: #fff;
+    --yel: #34bcf0;
+    --new: #54565a;
+    --darker: #26282a;
+    --greish: #F5F5F5;
+    --grey: #e1e1e1;
+    
+    --bordGrad:  linear-gradient(to right,#02aac6, #72e4cb) 1;
+    
+    
+  }
+
+  * {
+    transition: all ease-in-out 0.5s;
+    /* border: solid 1px rgb(68, 5, 241); */
+  }
+@font-face {
+    font-family: 'NET';
+    src: 
+         /* url('../fonts/NetflixSansBold.ttf'), */
+         /* url('../fonts/NetflixSansIcon.ttf'), */
+         url('../fonts/NetflixSansLight.ttf'),
+         /* url('../fonts/NetflixSansMedium.ttf'), */
+         /* url('../fonts/NetflixSansRegular.ttf'), */
+         url('../fonts/NetflixSansThin.ttf');
+    
+}
+
+@font-face {
+    font-family: 'BEN';
+    src: url('../fonts/NetflixSansBlack.ttf'),
+         url('../fonts/NetflixSansBold.ttf'),
+         url('../fonts/NetflixSansIcon.ttf'),
+         url('../fonts/NetflixSansLight.ttf'),
+         url('../fonts/NetflixSansMedium.ttf'),
+         url('../fonts/NetflixSansRegular.ttf'),
+         url('../fonts/NetflixSansThin.ttf');
+    
+} 
+
+.User-mobile{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-btn{
+    height: 5vh;
+    width: 94%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.8%;
+
+    font-size: 5.5vw;
+    font-family: "BEN";
+    background: var(--greish);
+    color: var(--new);
+
+}
+
+.upper-mobile{
+    width: 100%;
+    height: 42vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--greish);
+    margin-bottom: 4%;
+}
+
+.user-profile-image{
+    width: 50%;
+    height: 70%;
+    border-radius: 70px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    /* overflow: hidden; */
+}
+
+.profile-image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50px;
+
+}
+
+.plus-sign{
+    background-color: var(--hover);
+    color: var(--tcolor);
+    width: 15%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    position: absolute;
+    align-self: flex-end;
+    right: 0;
+    bottom: 10%;
+
+}
+.user-names{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    flex-direction: row;
+    width: 100%;
+    height: 15%;
+}
+
+.name{
+    font-size: 7vw;
+    display: flex;
+    font-family: "BEN";
+    text-align: center;
+    justify-content: center;
+    width: fit-content;
+    
+}
+
+.hre{
+    color: var(--new);
+    font-size: 4vw;
+    display: flex;
+    width: 85%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.userCode{
+    color: var(--hover);
+    font-family: "BEN";
+}
+
+.user-email{
+    font-family: "NET";
+    font-size: 4vw;
+    height: 9%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.lower-mobile{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px 20px 0px 0px;
+    gap: 3%;
+    box-shadow: 0px 4px 10px rgba(140, 136, 136, 0.673);
+    overflow-x: scroll;
+
+}
+
+.card-lift{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    height: 10vh;
+    margin-top: 2vh;
+    text-decoration: none;
+}
+
+.card-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    text-decoration: none;
+}
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10vw;
+    width: 20%;
+    height: 90%;
+    border-radius: 10px;
+    background-color: var(--hover);
+    color: var(--tcolor);
+    margin-right: 5%;
+}
+
+.card-text{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: "BEN";
+    font-size: 5.5vw;
+    text-align: left;
+    height: 100%;
+    width: 70%;
+    text-decoration: none;
+    color: var(--new);
+}
+
+.card-right{
+    display: flex;
+    justify-content: right;
+    padding-right: 5%;
+    align-items: center;
+    font-size: 5.5vw;
+    font-family: "BEN";
+    width: 10%;
+    height: 100%;
+}
+
+.extra1{
+    background-color: rgb(237, 170, 170);
+}
+.extra2{
+    background-color: pink;
+}
+
+.extra3{
+    background-color: purple;
+}
+
+.extra4{
+    background-color: rgb(155, 246, 155);
+}
+
+.extra5{
+    background-color: rgb(197, 186, 188);
+}
+
+.extra6{
+    background-color: rgb(14, 14, 14);
+}
+
+.kink{
+    color: var(--new);
+    font-family: "NET";
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.user-profile-image > .plus-sign{
+    overflow: visible;
+}
+
+.addPicBtn::before{
+    content: '+';
+    /* padding: 20%; */
+    padding-left: 5px;
+    font-size: 5vw;
+    color: var(--tcolor);
+    background-color: var(--hover);
+}

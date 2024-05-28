@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <link rel="stylesheet" href="../css/all.min.css">
+    <script defer src="../js/all.min.js"></script>
+    <script defer src="../js/user.js"></script>
+    <script defer src="../js/userdrop.js"></script>
+
+    <link rel="stylesheet" href="../fonts/NetflixSansBlack.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansBold.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansIcon.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansLight.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansMedium.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansRegular.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansThin.ttf">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/library.css">
+    <link rel="stylesheet" href="../css/user.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <!-- <link rel="stylesheet" href="../css/library.css"> -->
+
+
+</head>
+<body>
+    <% if (isDesktop) { %>
+        <div class="nav-bar" id="navi">
+            <div class="nav-left">
+                <a class="nav-img" href="/" ></a>
+                <div class="name ">eakReads</div>
+            </div>
+            <div class="nav-right">
+                <div class="nav-link "><a class="cont-link " href="/library">Library</a></div>
+                <div class="nav-link "><div class="cont-link nav-link-borrowed" >Borrowed Books</div></div>
+                <div class="nav-link "><div class="cont-link nav-link-liked">Liked Books</div></div>
+                <div class="nav-link "><div class="cont-link nav-link-requested">Requested Books</div></div>
+    
+    
+            </div>
+        </div>
+        <div class="budge">
+            <div class="logo">
+                <div class="nav-img" ></div>
+            </div>
+            <div class="drop-btn " id="dpb"><i class="d-btn fa fa-bars"></i></div>
+        </div>
+        <div class="user-inc">
+            <div class="bookNumberOFResults">
+                <p class="bold1001">My Profile</p>
+                <a class="viewPic" href="/editUser">Edit Profile</a>
+                <a class="viewPic" href="/logout">Log Out</a>
+                <a class="viewPic" id="showButton" href="/delete">Delete Account</a>
+                
+            </div>
+            <%-include('_userSI')%>
+            <!-- <div class="toBereturned1" id="myDiv">
+                <div class="meercBody"><p>This action is irreversible. Are you sure you want to delete your account?</p></div>
+                <div class="lowerBelt">
+                    <a class="viewPic" href="/delete-account">Delete Account</a>
+                    <div class="viewPic vpt" id="hideButton">Cancel</div>
+                </div>
+            </div> -->
+            <p class="bookLaws">Borrowed books must be returned within 72 hours</p>
+    
+            <div class="reqbookCard">
+                <p class="box-tag-hold">Borrowed Books</p>
+                <%-include('_BorrowedBooks')%>
+                <%-include('_LikedBooks')%>
+                <%-include('_requestedBooks')%>
+            </div>
+        </div>
+    <% } else { %>
+        <%-include('_mobile')%>
+
+    <% } %>
+</body>
+<script>
+    const isDesktop = window.matchMedia("(min-width: 769px)").matches;
+
+    document.addEventListener("DOMContentLoaded", function () {
+        function hideAllSectionsExcept(sectionToKeepVisible) {
+            document.querySelectorAll('#borrowedBooksSection, #likedBooksSection, #requestedBooksSection').forEach(element => {
+                if (element !== sectionToKeepVisible) {
+                    element.style.display = 'none';
+                } else {
+                    element.style.display = 'flex';
+                }
+            });
+        }
+
+        // Function to toggle visibility based on the clicked link
+        function toggleSectionVisibility(sectionToShow) {
+            hideAllSectionsExcept(sectionToShow);
+        }
+
+        // Initially display the "Borrowed Books" section
+        hideAllSectionsExcept(document.querySelector('#borrowedBooksSection'));
+
+        // Click event listeners for the links
+        document.querySelector(".nav-link-borrowed").addEventListener("click", function () {
+            toggleSectionVisibility(document.querySelector('#borrowedBooksSection'));
+            document.querySelector(".box-tag-hold").innerHTML = "Borrowed Books";
+            document.querySelector(".bookLaws").innerHTML = "Borrowed books must be returned within 72 hours";
+        });
+
+        document.querySelector(".nav-link-liked").addEventListener("click", function () {
+            toggleSectionVisibility(document.querySelector('#likedBooksSection'));
+            document.querySelector(".box-tag-hold").innerHTML = "Liked Books";
+            document.querySelector(".bookLaws").innerHTML = "You can find books you like here";
+        });
+
+        document.querySelector(".nav-link-requested").addEventListener("click", function () {
+            toggleSectionVisibility(document.querySelector('#requestedBooksSection'));
+            document.querySelector(".box-tag-hold").innerHTML = "Requested Books";
+            document.querySelector(".bookLaws").innerHTML = "Please go to your local BeakReads library to receive the requested item(s)";
+        });
+    });
+</script>
+
+</html>

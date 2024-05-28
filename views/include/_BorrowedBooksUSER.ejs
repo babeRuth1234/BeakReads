@@ -1,0 +1,19 @@
+<% BorrowedBooksDetails.forEach(book => { %>
+    <div class="toBereturned" >
+      <div class="covHolder">
+        <img class="user-img" src="/<%= book.BookCover %>" alt="user image">
+      </div>
+      <div class="bokreSched">
+        <div class="Divname di1">
+          <p class="UserName na1"><%= book.Source %></p>
+        </div>
+        <div class="countdown-timer" data-timestamp="<%= book.borrowedTimestamp %>">
+          <span class="countdown" data-timestamp="<%= book.borrowedTimestamp %>">
+            Time remaining: Loading...
+          </span>
+        </div>
+        <div class="viewPic greBack">Return</div>
+      </div>
+    </div>
+  <% }) %>
+  

@@ -1,0 +1,459 @@
+body{
+    /* margin: 0;
+    padding: 0%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(../img/banner-2022.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+body .geex{
+    justify-self: flex-start;
+}
+
+*{
+    /* border: solid 1px red; */
+}
+
+:root {
+    --edge: #232323;
+    --back: #000000;
+    --theme: #eaaa00;
+    --color: #3a3d3f;
+    --hover: #eaaa00;
+    --tcolor: #fff;
+    --yel: #34bcf0;
+    --new: #54565a;
+    --darker: #26282a;
+
+    --grey: #e1e1e1;
+    
+    --bordGrad:  linear-gradient(to right,#02aac6, #72e4cb) 1;
+    
+    
+  }
+
+@font-face {
+    font-family: 'NET';
+    src: 
+         /* url('../fonts/NetflixSansBold.ttf'), */
+         /* url('../fonts/NetflixSansIcon.ttf'), */
+         url('../fonts/NetflixSansLight.ttf'),
+         /* url('../fonts/NetflixSansMedium.ttf'), */
+         /* url('../fonts/NetflixSansRegular.ttf'), */
+         url('../fonts/NetflixSansThin.ttf');
+    
+}
+
+@font-face {
+    font-family: 'BEN';
+    src: url('../fonts/NetflixSansBlack.ttf'),
+         url('../fonts/NetflixSansBold.ttf'),
+         url('../fonts/NetflixSansIcon.ttf'),
+         url('../fonts/NetflixSansLight.ttf'),
+         url('../fonts/NetflixSansMedium.ttf'),
+         url('../fonts/NetflixSansRegular.ttf'),
+         url('../fonts/NetflixSansThin.ttf');
+    
+}
+
+
+.logBox{
+    display: flex;
+    /* border: solid 1px green; */
+    /* justify-content: center; */
+    align-items: last baseline;
+    width: 100%;
+    height: 97vh;
+    /* background-image: url(../imageundraw_my_password_re_ydq7.svg); */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.logBox2{
+    display: flex;
+    /* background-image: url(../image/undraw_images_re_0kll.svg); */
+    /* border: solid 1px green; */
+    justify-content: center;
+    align-items: center;
+    /* padding-top: 2.6%; */
+    flex-direction: column;
+    width: 90%;
+    height: 90vh;
+    gap: 1%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.logcar{
+    display: flex;
+    justify-content: first baseline;
+    flex-direction: column;
+    border: solid 3px var(--hover);
+    /* padding-top: 10%; */
+    align-items: center;
+    width:28%;
+    height: 84.1%;
+    margin-left: 25%;
+    border-radius: 30px;
+    background-color: #fff;
+}
+
+.logcar2{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* border: solid 3px var(--hover); */
+    /* padding-top: 10%; */
+    align-items: center;
+    width:55%;
+    height: 67.5%;
+    /* margin-left: 1.7%; */
+    border-radius: 30px;
+    background-color: #fff;
+}
+.logKit{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    height: 27%;
+}
+
+.fname{
+    font-family: "NET";
+    font-size: 0.9vw;
+    color: var(--new);
+}
+
+.fnamei{
+    height: 45%;
+    border: solid 1px var(--grey);
+    border-radius: 8px;
+    padding-left: 3%;
+    outline-color: var(--hover);
+    /* outline:1px solid var(--hover); */
+
+}
+.fnamei::placeholder{
+    /* padding-left: 1%; */
+}
+.ttl{
+    font-family: 'BEN';
+    font-size: 2vw;
+    margin-top: 10%;
+}
+
+.checkBox{
+    display: flex;
+    height: 30%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 4%;
+    /* display: none; */
+    /* border: solid 1px blue; */
+}
+
+.btnBox{
+    display: flex;
+    /* border: solid 1px red; */
+    width: 100%;
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+    display: none;
+
+}
+
+.forgot-password{
+    font-family: "NET";
+    font-size: 1vw;
+    border-bottom: solid 1px var(--hover);
+    cursor: pointer;
+}
+
+.btnBox2{
+    display: flex;
+    /* border: solid 1px red; */
+    width: 50%;
+    height: 15%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}
+
+.sigClick1{
+    display: flex;
+    /* border: solid 1px red; */
+    width: 30%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: var(--hover);
+    font-family: "BEN";
+    color: #fff;
+    cursor: pointer;
+}
+.sigClick1{
+    display: flex;
+    /* border: solid 1px red; */
+    width: 30%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: var(--edge);
+    font-family: "BEN";
+    color: #fff;
+    cursor: pointer;
+}
+.sigClick1:hover {
+    background-color: #fff;
+    transition: all ease-in-out 0.3s;
+    color: var(--hover); 
+    border: solid 1px var(--hover);
+    
+}
+
+
+.checkDot{
+    display: flex;
+    flex-direction: row;
+    align-items: first baseline ;
+
+}
+
+.inputDiv{
+    height: 47%;
+    border: solid 1px var(--grey);
+    border-radius: 8px;
+    /* padding-left: 13%; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;overflow: hidden;
+}
+
+.fbar{
+    width: 80%;
+    border: none;
+    height: 90%;
+    outline: none;
+}
+
+.eyebtn{
+    width: 20%;
+    background: #fff;
+    border: none;
+    outline: none;
+}
+
+.eyebtn:hover{
+    background-color: var(--grey);
+}
+.dotit{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.ctext{
+    color: var(--color);
+    font-family: "BEN";
+    font-size: 0.9vw;
+}
+.dotTExt{
+    color: var(--new);
+    font-family: "NET";
+    font-size: 0.9vw;
+    margin-left: 1%;
+}
+.dot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* height: 100%; */
+    font-size: 0.7vw;
+    /* border: solid 1px green; */
+}
+
+.fan{
+    color: var(--new);
+}
+
+.altLink{
+    display: flex;
+    flex-direction: row;
+}
+
+.linka{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "BEN";
+    color: var(--hover);
+}
+
+.Already{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "BEN";
+    color: var(--new);
+}
+
+.btnVisibility{
+    display: flex;
+}
+.dispeardo{
+    display: none;
+}
+
+@media screen and (max-width: 1021px) {
+    *{
+        /* border: solid 1px red;    */
+    }
+
+    .logBox{
+        display: flex;
+        /* border: solid 1px green; */
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 97vh;
+        background-image: url(../image/undraw_my_password_re_ydq7.svg);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    
+    .logBox2{
+        display: flex;
+        background-image: url(../image/undraw_dashboard_re_3b76.svg);
+        /* border: solid 1px green; */
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 97vh;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    
+    .logcar{
+        display: flex;
+        justify-content: first baseline;
+        flex-direction: column;
+        border: solid 3px var(--hover);
+        /* padding-top: 10%; */
+        align-items: center;
+        width:80%;
+        height: 84.1%;
+        margin-left: 0%;
+        border-radius: 30px;
+        background-color: #fff;
+    }
+    
+    .logcar2{
+        display: flex;
+        justify-content: first baseline;
+        flex-direction: column;
+        border: solid 3px var(--hover);
+        /* padding-top: 10%; */
+        align-items: center;
+        width:80%;
+        height: 84.1%;
+        margin-left: 0%;
+        border-radius: 30px;
+        background-color: #fff;
+    }
+    .fname{
+        font-family: "NET";
+        font-size: 3vw;
+        color: var(--new);
+    }
+    .dot{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        /* height: 100%; */
+        font-size: 2vw;
+        /* border: solid 1px green; */
+    }
+
+    .dotTExt{
+        color: var(--new);
+        font-family: "NET";
+        font-size: 3vw;
+        margin-left: 1%;
+    }
+    .ctext{
+        color: var(--color);
+        font-family: "BEN";
+        font-size: 3vw;
+    }
+    .ttl{
+        font-family: 'BEN';
+        font-size: 7vw;
+        margin-top: 10%;
+    }
+    .ttl2{
+        font-family: 'BEN';
+        font-size: 7vw;
+        margin-top: 10%;
+    }
+
+    .forgot-password{
+        font-family: "NET";
+        font-size: 4vw;
+        border-bottom: solid 1px var(--hover);
+        cursor: pointer;
+    }
+    
+}
+
+.picIn{
+    width: 50%;
+    height: 60%;
+    border-radius: 14px;
+    border: solid 2px #eaaa00;
+}
+
+.disClam{
+    width: 50%;
+    color: #fff;
+    font-family: "BEN";
+    font-size: 1.7vw;
+    text-align: center;
+}
+
+.bBox{
+    width: 40%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.geex{
+    background-color: #eaaa00;
+    height:8vh;
+    width: 10%;
+    justify-self: flex-start;
+}

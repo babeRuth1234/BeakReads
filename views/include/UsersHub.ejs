@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <link rel="stylesheet" href="../css/all.min.css">
+    <script defer src="../js/all.min.js"></script>
+    <script defer src="../js/user.js"></script>
+    <link rel="stylesheet" href="../fonts/NetflixSansBlack.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansBold.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansIcon.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansLight.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansMedium.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansRegular.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansThin.ttf">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/library.css">
+    <link rel="stylesheet" href="../css/user.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/userDeedS.css">
+
+    <!-- <link rel="stylesheet" href="../css/library.css"> -->
+
+
+</head>
+<body>
+    <div class="nav-bar" id="navi">
+        <div class="nav-left">
+            <a class="nav-img" href="/" ></a>
+            <div class="name ">eakReads</div>
+        </div>
+        <div class="nav-right">
+
+            <div class="nav-link "><a class="cont-link nav-link-borrowed" href="/adminPanel">Admin Board</a></div>
+
+
+
+        </div>
+    </div>
+    <div class="budge">
+        <div class="logo">
+            <div class="nav-img" ></div>
+        </div>
+        <div class="drop-btn " id="dpb"><i class="d-btn fa fa-bars"></i></div>
+    </div>
+    <div class="user-inc">
+        <div class="bookNumberOFResults">
+            
+            <a class="viewPic" id="showButton" href="/delete">Delete Account</a>
+            
+        </div>
+        <%-include('_userSI')%>
+        <!-- <div class="toBereturned1" id="myDiv">
+            <div class="meercBody"><p>This action is irreversible. Are you sure you want to delete your account?</p></div>
+            <div class="lowerBelt">
+                <a class="viewPic" href="/delete-account">Delete Account</a>
+                <div class="viewPic vpt" id="hideButton">Cancel</div>
+            </div>
+        </div> -->
+        <p class="bookLaws">Accept user Book requests below</p>
+
+        <div class="smartBox">
+            <div class="leftSmartBox">
+                <div class="reqbookCard ">
+                    <p class="box-tag-hold">Borrowed Books</p>
+                    
+     
+                    <%-include('_BorrowedBooksUSER')%> 
+                </div>
+                
+            </div>
+            <div class="leftSmartBox">  
+                <div class="reqbookCard ">
+                    <p class="box-tag-hold">Requested Books</p>
+                    
+                    <%-include('_requestedBooksUser')%>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+   
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll('#borrowedBooksSection').forEach(element => {
+            element.style.display = 'none';
+        });
+
+        document.querySelectorAll('#likedBooksSection').forEach(element => {
+            element.style.display = 'none';
+        });
+
+        document.querySelectorAll('#requestedBooksSection').forEach(element => {
+            element.style.display = 'none';
+        });
+
+        // Function to toggle visibility based on the clicked link
+        function toggleSectionVisibility(sectionToShow) {
+            document.querySelectorAll('#borrowedBooksSection').forEach(element => {
+                element.style.display = 'none';
+            });
+
+            document.querySelectorAll('#likedBooksSection').forEach(element => {
+                element.style.display = 'none';
+            });
+
+            document.querySelectorAll('#requestedBooksSection').forEach(element => {
+                element.style.display = 'none';
+            });
+
+            sectionToShow.forEach(element => {
+                element.style.display = 'flex';
+            });
+        }
+
+        // Click event listeners for the links
+        document.querySelector(".nav-link-borrowed").addEventListener("click", function () {
+            toggleSectionVisibility(document.querySelectorAll('#borrowedBooksSection'));
+            document.querySelector(".box-tag-hold").innerHTML = "Borrowed Books"
+            console.log("pennyWise")
+            document.querySelector(".bookLaws").innerHTML = "Borrowed books must be returned within 72 hours"
+        });
+
+        document.querySelector(".nav-link-liked").addEventListener("click", function () {
+            toggleSectionVisibility(document.querySelectorAll('#likedBooksSection'));
+            document.querySelector(".box-tag-hold").innerHTML = "Liked Books"
+            document.querySelector(".bookLaws").innerHTML = "You can find books you like here"
+        });
+
+        document.querySelector(".nav-link-requested").addEventListener("click", function () {
+            toggleSectionVisibility(document.querySelectorAll('#requestedBooksSection'));
+            document.querySelector(".box-tag-hold").innerHTML = "Requested Books"
+            document.querySelector(".bookLaws").innerHTML = "Please go to your local BeakReads library to receive the requested item(s)"
+        });
+    });
+    // Get all elements with the class "countdown-timer"
+
+</script>
+</html>

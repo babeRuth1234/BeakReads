@@ -1,0 +1,804 @@
+
+:root {
+    --edge: #232323;
+    --back: #000000;
+    --theme: #eaaa00;
+    --color: #3a3d3f;
+    --hover: #eaaa00;
+    --tcolor: #fff;
+    --yel: #34bcf0;
+    --new: #54565a;
+    --darker: #26282a;
+
+    --grey: #e1e1e1;
+    
+    --bordGrad:  linear-gradient(to right,#02aac6, #72e4cb) 1;
+    
+    
+  }
+
+
+
+  * {
+    transition: all ease-in-out 0.5s;
+    /* border: solid 1px rgb(68, 5, 241); */
+  }
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 30%;
+    height: 100%;
+    /* border: solid 1px rgb(170, 130, 238); */
+}
+
+.disTxt{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    font-family: "BEN";
+    font-size: 2.4vw;
+    color: var(--color);
+    cursor: pointer;
+}
+
+
+.filtIcon{
+    display: flex;
+    height: 30%;
+    width: 20%;
+}
+
+.src-top-h{
+    width: 50%;
+    height: 8vh;
+}
+
+.cta-inp {
+    width: 100%;
+    height: 100%;
+    /* padding: 1.2vh; */
+}
+
+
+
+
+
+.Divname{
+    border-bottom: solid 1.2px var(--color);
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+}
+.bokreSched{
+    gap: 1%;
+}
+
+.bokreSched{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.toBereturned{
+    background-color: var(--tcolor);
+    gap: 6%;
+}
+.covHolder{
+    width: 40%;
+}
+.ledLight{
+    border-bottom: none;
+}
+
+.bookNumberOFResults{
+    display: flex;
+    font-size: 2vw;
+    color: var(--color);
+    font-family: "NET";
+    justify-content: flex-start;
+    gap: 2px;
+    align-items: center;
+    width: 80%;
+    height: 7vh;
+}
+
+.userDetails-card-info{
+    display: flex;
+    flex-direction: row;
+    width: 78%;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1%;
+    padding-right: 1%;
+
+}
+
+.userDetails-card-info2{
+    display: flex;
+    flex-direction: row;
+    width: 78%;
+    height: 10vh;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1%;
+    padding-right: 1%;
+    background-color: var(--tcolor);
+    border-radius: 5px;
+    /* box-shadow: 0px 2px 5px var(--new); */
+    /* border: 1px solid var(--color); */
+    text-decoration: none;
+}
+
+.userDetails-card-info2:hover{
+  background-color: var(--hover);
+  color: var(--tcolor);
+  scale: 1.1;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.userDetails-card-info2 :hover.jackAlign{
+  color: var(--tcolor);
+}
+.user-tap-icon{
+    display: flex;
+    width: 55%;
+    height: 100%;
+    border-radius: 50px;
+}
+
+.jackline{
+    height: 90%;
+
+    
+}
+
+
+.jackAlign{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1vw;
+    width: 10%;
+    color: var(--tcolor);
+    font-family: "BEN";
+}
+.twicth{
+  /* letter-spacing: 0.4vw; */
+  display: flex;
+  width: 100%;
+  
+  font-size: 1.5vw;
+  color: var(--hover);
+
+}
+
+.bold100{
+    font-family: "BEN";
+    color: var(--darker);
+}
+
+
+.highDay{
+    color: var(--hover);
+}
+
+.coveredUp{
+    background-color: rgb(228 247 238);
+    padding: 1%;
+    border-radius: 5px;
+}
+
+.adminFilterList{
+    padding-top: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    gap: 13px;
+    /* background: url(../img/undraw_dashboard_re_3b76.svg); */
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 40vh;
+    overflow-y: scroll;
+    /* background-image: url("../img/bookss.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; */
+}
+
+.viewPic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "NET";
+    color: var(--tcolor);
+    border-radius: 5px;
+    background-color: var(--hover);
+    font-size: 1.1vw;
+    padding: 1.5vh 2vh 1.5vh 2vh;
+    border: solid 1px var(--hover);
+    cursor: pointer;
+    
+}
+.viewPic8{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "NET";
+  color: var(--tcolor);
+  border-radius: 5px;
+  background-color: var(--hover);
+  font-size: 1.1vw;
+  padding: 1.5vh 2vh 1.5vh 2vh;
+  border: solid 1px var(--hover);
+  cursor: default;
+}
+.filterer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    gap: 1%;
+    height: 15vh;
+}
+
+.dropDown{
+    position: relative;
+    display: flex;
+    width: 30%;
+    height: fit-content;
+}
+
+
+
+.dropdown-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4%;
+    background-color: #fff;
+    border: none;
+    color: #333;
+    /* padding: 10px 15px; */
+    font-size: 1vw;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 10px;
+    font-family: "BEN";
+
+}
+
+
+.dropdown-button1{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4%;
+  background-color: #fff;
+  border: none;
+  color: #333;
+  /* padding: 10px 15px; */
+  font-size: 1vw;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 10px;
+  font-family: "BEN";
+
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #fff;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: none;
+}
+
+.dropdown-menu {
+    padding: 10px;
+}
+
+.dropDown:hover .dropdown-menu{
+    display: block;
+}
+
+.casual-right{
+    flex-direction: column;
+}
+
+
+.viewPic{
+    gap: 2%;
+    background-color: #ff3333;
+    width: 40%;
+    font-family: "BEN";
+}
+
+.omoBill{
+    background: #808000;
+
+}
+
+
+.lib-det-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    height: fit-content;
+    border-radius: 5px;
+    background-color: var(--tcolor);
+  }
+  
+  .book-long-title{
+    display: flex;
+    width: 95%;
+    /* height: 7vh; */
+    padding: 2vh 0 2vh 0;
+    align-items: center;
+    font-family: "BEN";
+    color: var(--edge);
+  }
+  
+  .book-proper-details{
+    display: flex;
+    width: 95%;
+    height: 25vh;
+    flex-direction: row;
+    align-items: center;
+    gap: 3%;
+  }
+  
+  .static-details{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    justify-content: center;
+    gap: 4%;
+    font-family: "BEN";
+    font-size: 1.1vw;
+    color: var(--new);
+    
+  }
+  
+  .non-static-det{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    width: fit-content;
+    justify-content: center;
+    gap: 3%;
+    font-family: "BEN";
+    font-size: 1.2vw;
+    color: var(--color);
+  }
+  .author-txt{
+    margin: 0;
+  }
+  
+  .details-stats{
+    margin: 0;
+  }
+  
+  .carryMore-details{
+    display: flex;
+    width: 95%;
+    height: fit-content;
+    align-items: center;
+    font-family: "NET";
+    color: var(--new);
+    font-size: 1vw;
+  }
+  
+  .butCollection{
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    width: 95%;
+    gap: 2%;
+  }
+  
+  .viewPic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "NET";
+    color: var(--tcolor);
+    border-radius: 5px;
+    background-color: var(--hover);
+    font-size: 1.1vw;
+    padding: 1.5vh 2vh 1.5vh 2vh;
+    border: solid 1px var(--hover);
+    cursor: pointer;
+  }
+  
+  
+  .viewPic:hover {
+    color: var(--hover);
+    background-color: var(--tcolor);
+    border: solid 1px var(--hover);
+  }
+  .Shelftloca:hover{
+    color: var(--hover);
+    background-color: var(--tcolor);
+    border: solid 1px var(--hover);
+  }
+  
+  .more-dets:hover{
+    color: var(--hover);
+    background-color: var(--tcolor);
+    border: solid 1px var(--hover);
+  }
+  .like-book:hover{
+    color: var(--hover);
+    background-color: var(--tcolor);
+    border: solid 1px var(--hover);
+  }
+  .req-book:hover{
+    color: var(--hover);
+    background-color: var(--tcolor);
+    border: solid 1px var(--hover);
+  }
+  .Shelftloca{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5vh 1.3vh 1.5vh 1.3vh;
+    gap: 5%;
+    font-size: 1.1vw;
+    font-family: "NET";
+    color: var(--new);
+    border: solid 1px var(--new);
+    border-radius: 5px;  
+    cursor: pointer;
+    text-decoration: none;
+  
+  }
+  .more-dets{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 1%; */
+    padding: 1.5vh 1.3vh 1.5vh 1.3vh;
+    flex-direction: row;
+    font-size: 1.1vw;
+    font-family: "NET";
+    color: var(--new);
+    border: solid 1px var(--new);
+    border-radius: 5px;  
+    cursor: pointer;
+  }
+  .like-book{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5vh 1.3vh 1.5vh 1.3vh;
+    font-size: 1.2vw;
+    font-family: "NET";
+    color: var(--new);
+    border: solid 1px var(--new);
+    border-radius: 5px;  
+    cursor: pointer;
+  }
+  .req-book{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5vh 1.3vh 1.5vh 1.3vh;
+    font-size: 1.2vw;
+    font-family: "NET";
+    color: var(--new);
+    border: solid 1px var(--new);
+    border-radius: 5px;  
+    cursor: pointer;
+}
+
+.createBooks{
+    width: 80%;
+    height: 100vh;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--tcolor);
+}
+  
+.createLeftBook{
+    width: 65%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.createRightBook{
+    border-left:1px solid var(--new);
+    width: 35%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageBookBack{
+    width: 76%;
+    height: 70%;
+    /* background-image: url(/img/LH_1.png); */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bmage{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    image-rendering: auto;
+    border-radius: 10px;
+}
+.eachCreatDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    width: 90%;
+    height: 16%;
+    border-radius: 8px;
+}
+
+.eachCreatDiv1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    width: 90%;
+    height: 10%; 
+}
+
+.eachCreatDiv2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    width: 91%;
+    height: 50%; 
+}
+.eachCreatDiv4{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  text-align: justify;
+  width: 91%;
+  height: 50%; 
+}
+.expand{
+    height: 4vh;
+    width: 100%;
+    outline: none;
+    border: none;
+    font-family: "BEN";
+    text-align: center;
+    font-size: 1.2vw;
+}
+
+.expand::after{
+  position: relative;
+  content: "fa fa-sort-down";
+}
+.borderCurved{
+    width: 90%;
+    height: 60%;
+    border-radius: 8px;
+    outline: var(--hover);
+    border: 1px solid var(--hover);
+}
+
+.eachCreatDiv3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    width: 90%;
+    height: 50%; 
+}
+.creatFild{
+    width: 90%;
+    height: 40%;
+}
+
+.edegBoy{
+    width: 76%;
+}
+
+.curvedEgded{
+    border-radius: 8px;
+}
+
+.eachCreatDiv label {
+ font-family: "NEt";   
+}
+
+.puby{
+    font-family: "NET";
+    font-size: 1.3vw;
+
+}
+
+.centtred{
+    justify-content: space-between;
+    width: 76%;
+}
+
+.remae{
+    color: var(--tcolor);
+    background: var(--theme);
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4%;
+}
+
+.theWikins{
+    width: 90%;
+}
+
+.file-input-container {
+    position: relative;
+    display: flex;
+}
+
+.file-label {
+      background: var(--hover);
+    /* background-color: #f0f0f0; */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "NEt";
+    color: var(--tcolor);
+  }
+  
+  .file-label i {
+    margin-right: 5px;
+  }
+  
+  /* Style the file input itself (hidden) */
+  .jadea {
+    display: none;
+  }
+  
+/* Styling for the capture window container */
+#cameraCapture {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999; /* Ensure it appears on top of everything else */
+    background-color: #e60101; /* Set your desired background color */
+    border: 1px solid #000; /* Add a border if needed */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a drop shadow */
+    padding: 20px;
+  }
+  
+  #cameraWindow {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999; /* Set a high z-index to be on top of everything */
+    display: none; /* Initially hide the camera window */
+    /* Add other styling here, e.g., background color, border, etc. */
+  }
+
+#captureButton{
+    height: 60%;
+    width: 40%;
+    background-color: var(--hover);
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    color: var(--tcolor);
+    font-family: "NET";
+    font-size: 1.3vw;
+}
+.gender{
+  color: var(--new);
+  font-size: 1vw;
+}
+
+.gender{
+  font-family: "BEN";
+}
+.lemon {
+  background-color: #eaaa00;
+  border: solid 1px red;
+  font-family: "BEN";
+
+}
+.arrangement{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /* gap: 3%; */
+  font-family: "BEN";
+  font-size: 2.2vw;
+}
+.logKit{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 26%;
+  height: 17%;
+}
+
+.tweak{
+  width: 30%;
+  height: 30%;
+}
+
+.disabled {
+  background-color: black; /* Set a background color for the disabled state */
+  color: #888; /* Set a text color for the disabled state */
+  opacity: 0.6; /* Reduce opacity to visually indicate the button is disabled */
+  cursor: not-allowed; /* Change cursor to not-allowed to indicate the button is not clickable */
+  pointer-events: none; /* Disable pointer events to prevent interaction */
+}
+
+
+.userDetails-card-info2:hover .jackAlign{
+  background-color: var(--hover);
+  color: var(--tcolor);
+
+}
+
+.sidswao{
+  flex-direction: row;
+}
+
+.paticular{
+  gap: 1%;
+}
+
+.creatFild1{
+  width: 20%;
+  height: 70%;
+}
+
+.eggroll{
+  background: linear-gradient(transparent 10%, black 100%), url(../img/undraw_dashboard_re_3b76.svg);
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

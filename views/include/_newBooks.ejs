@@ -1,0 +1,151 @@
+
+<!-- <%for(var i = 0; i < books.length; i++){%>
+    <div class="lib-det-card">
+        <div class="book-long-title"><%=books[i].Source%></div>
+        <div class="book-proper-details">
+            <div class="static-details">
+                <p class="author-txt">Author(s):</p>
+                <p class="author-txt">Publication year:</p>
+                <p class="author-txt">Publication title:</p>
+                <p class="author-txt">Resource type:</p>
+            </div>
+            <div class="non-static-det">
+                <p class="details-stats"><%=books[i].Author%></p>
+                <p class="details-stats"><%=books[i].Year%></p>
+                <p class="details-stats"><%=books[i].PublicationTitle%></p>
+                <p class="details-stats"><%=books[i].ResourceType%></p>
+            </div>
+        </div>
+        <div class="carryMore-details"><%=books[i].About%></div>
+        <div class="butCollection">
+            <a class="viewPic" href="/view-cover/<%= books[i]._id %>">View Cover</a>
+          
+            <div class="Shelftloca"> <i class="fa fa-location-pin"></i>Locate</div>
+            <div class="more-dets"><i class="fa fa-angle-down"></i> More details</div>
+            <div class="like-book"><i class="fa fa-thumbs-up"></i></div>
+            <div class="req-book">Request Book</div>
+        </div>
+    </div>
+<%}%>  -->
+
+
+
+<!-- <% if (searchQuery) { %>
+    <% books.forEach(book => { %>
+        <% if (
+            book.Author.toLowerCase().includes(searchQuery.toLowerCase()) &&
+            (!resourceType || book.ResourceType === resourceType) &&
+            (!publicationDate || book.PublicationDate === publicationDate)) { %>
+            <div class="lib-det-card">
+                <div class="book-long-title"><%= book.Source %></div>
+                <div class="book-proper-details">
+                    <div class="static-details">
+                        <p class="author-txt">Author(s):</p>
+                        <p class="author-txt">Publication year:</p>
+                        <p class="author-txt">Publication title:</p>
+                        <p class="author-txt">Resource type:</p>
+                    </div>
+                    <div class="non-static-det">
+                        <p class="details-stats"><%= book.Author %></p>
+                        <p class="details-stats"><%= book.Year %></p>
+                        <p class="details-stats"><%= book.PublicationTitle %></p>
+                        <p class="details-stats"><%= book.ResourceType %></p>
+                    </div>
+                </div>
+                <div class="carryMore-details"><%= book.About %></div>
+                <div class="butCollection">
+                    <a class="viewPic" href="/view-cover/<%= book._id %>">View Cover</a>
+                    <div class="Shelftloca"><i class="fa fa-location-pin"></i>Locate</div>
+                    <div class="more-dets"><i class="fa fa-angle-down"></i> More details</div>
+                    <div class="like-book"><i class="fa fa-thumbs-up"></i></div>
+                    <div class="req-book">Request Book</div>
+                </div>
+            </div>
+        <% } %>
+    <% }) %>
+<% } else { %>
+    <% books.forEach(book => { %>
+        <div class="lib-det-card">
+            <div class="book-long-title"><%= book.Source %></div>
+            <div class="book-proper-details">
+                <div class="static-details">
+                    <p class="author-txt">Author(s):</p>
+                    <p class="author-txt">Publication year:</p>
+                    <p class="author-txt">Publication title:</p>
+                    <p class="author-txt">Resource type:</p>
+                </div>
+                <div class="non-static-det">
+                    <p class="details-stats"><%= book.Author %></p>
+                    <p class="details-stats"><%= book.Year %></p>
+                    <p class="details-stats"><%= book.PublicationTitle %></p>
+                    <p class="details-stats"><%= book.ResourceType %></p>
+                </div>
+            </div>
+            <div class="carryMore-details"><%= book.About %></div>
+            <div class="butCollection">
+                <a class="viewPic" href="/view-cover/<%= book._id %>">View Cover</a>
+                <div class="Shelftloca"><i class="fa fa-location-pin"></i>Locate</div>
+                <div class="more-dets"><i class="fa fa-angle-down"></i> More details</div>
+                <div class="like-book"><i class="fa fa-thumbs-up"></i></div>
+                <div class="req-book">Request Book</div>
+            </div>
+        </div>
+    <% }) %> 
+<% } %> -->
+<% if (books.length > 0) { %>
+    <% books.forEach(book => { %>
+      <div class="lib-det-card">
+        <div class="book-long-title"><%= book.Source %></div>
+        <div class="book-proper-details">
+          <div class="static-details">
+            <p class="author-txt">Author(s):</p>
+            <p class="author-txt">Publication year:</p>
+            <p class="author-txt">Publication title:</p>
+            <p class="author-txt">Resource type:</p>
+          </div>
+          <div class="non-static-det">
+            <p class="details-stats"><%= book.Author %></p>
+            <p class="details-stats"><%= book.Year %></p>
+            <p class="details-stats"><%= book.PublicationTitle %></p>
+            <p class="details-stats"><%= book.ResourceType %></p>
+          </div>
+        </div>
+        <div class="carryMore-details"><%= book.About %></div>
+        <div class="butCollection">
+          <a class="viewPic" href="/view-cover/<%= book._id %>">View Cover</a>
+          <a class="Shelftloca" href="/Locate/<%= book._id %>"><i class="fa fa-location-pin"></i> Locate</a>
+
+          <div class="more-dets"><i class="cargo fa fa-angle-down"></i> <p class="text">More details</p> </div>
+          <% if (likedBooks.some(likedBook => likedBook._id.toString() === book._id.toString())) { %>
+            <form action="/unlike-book/<%= book._id %>" method="POST">
+                <button type="submit" class="like-book"><i class="fa fa-thumbs-down"></i></button>  
+            </form>
+            <% } else { %>
+                <form action="/like-book/<%= book._id %>" method="POST">
+                  <button type="submit" class="like-book"><i class="fa fa-thumbs-up"></i></button>  
+                </form>
+            <% } %>
+            <% if (RequestedBooks.some(RequestedBook => RequestedBook._id.toString() === book._id.toString())) { %>
+                <form action="/Cancel-book/<%= book._id %>" method="POST">
+                    <button type="submit" class="req-book">Cancel Request</button>
+                </form>
+            <% } else if (borrowed.some(borroweds => borroweds._id.toString() === book._id.toString())) { %>  
+                    <div  class="req-book greenLeaf">Borrowed</div>
+            <% } else { %>
+                <form action="/request-book/<%= book._id %>" method="POST">
+                    <button type="submit" class="req-book">Request Book</button>
+                </form>
+            <% } %>
+            
+            
+          
+        </div>
+      </div>
+    <% }) %>
+  <% } else { %>
+    <div class="lib-det-card bookReo winnewwd"  >
+        <img class="user-img tweak" src="../img/undraw_no_data_re_kwbl.svg" alt="user image">
+        <p class="viewPic8">No books found for the given criteria.</p>
+      </div>
+  <% } %>
+  

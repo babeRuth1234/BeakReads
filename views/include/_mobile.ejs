@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <script defer src="../js/all.min.js"></script>
+    <link rel="stylesheet" href="../css/mobile.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="User-mobile">
+        <div class="back-btn" id="backButton">
+            <i class="fa fa-arrow-left"></i>
+            <p>Back</p>
+        </div>
+        <div class="upper-mobile">
+            <form class="user-profile-image" action="/uploadd" method="post" id="imageUploadForm" enctype="multipart/form-data">
+                <img class="profile-image" src="<%= user.ProfilePic %>" alt="user image" onerror="this.src='/img/undraw_male_avatar_g98d.svg'">
+                <input type="file" name="userImage1" class="addPicBtn" accept="image/*" id="userImageInput" placeholder="fa fa-plus">
+                <input type="hidden" name="profilePic" value="ProfilePic"> 
+                <!-- <div class="plus-sign"> <i class="fa fa-camera"></i></div> -->
+            </form>
+            <div class="user-names">
+                <p class="name"><%= user.FirstName %></p>
+                <p class="name"><%= user.LastName %></p>
+            </div>
+            <div class="user-email">
+                <p class="userCode kink"><%= user.Email %></p>
+            </div>
+            <div class="user-email">
+                <p>Library Code:</p>
+                <p class="userCode"><%= user.libraryCard %></p>
+            </div>
+        </div>
+        <div  class="lower-mobile">
+            <a href="/editUser" class="card-lift">
+                <div class="card-left">
+                    <div class="icon"><i class="fa fa-user"></i></div>
+                    <div  class="card-text">Edit profile</div>
+                </div>
+                <div class="card-right"><i class="fa fa-angle-right"></i></div>
+            </a>
+            <div class="card-lift">
+                <div class="card-left">
+                    <div class="icon extra1"><i class="fa-solid fa-code-pull-request"></i></div>
+                    <div class="card-text">Pending books</div>
+                </div>
+                <div class="card-right"><i class="fa fa-angle-right"></i></div>
+            </div>
+            <div class="card-lift">
+                <div class="card-left">
+                    <div class="icon extra2" ><i class="fa fa-book"></i></div>
+                    <div class="card-text">Borrowed books</div>
+                </div>
+                <div class="card-right"><i class="fa fa-angle-right"></i></div>
+            </div>
+            <div class="card-lift">
+                <div class="card-left">
+                    <div class="icon extra3" ><i class="fa fa-thumbs-up"></i></div>
+                    <div class="card-text">Liked books</div>
+                </div>
+                <div class="card-right"><i class="fa fa-angle-right"></i></div>
+            </div>
+            <hr class="hre">
+            <div class="card-lift">
+                <div class="card-left">
+                    <div class="icon extra4" ><i class="fa fa-moon"></i></div>
+                    <div class="card-text">Dark mode</div>
+                </div>
+                <div class="card-right">OFF</div>
+            </div>
+            <a href="/logout" class="card-lift">
+                <div class="card-left">
+                    <div class="icon extra5" ><i class="fas fa-sign-out-alt"></i></div>
+                    <div class="card-text">Log out</div>
+                </div>
+                <div class="card-right"><i class="fa fa-angle-right"></i></div>
+            </a>
+            <div class="card-lift">
+                <div class="card-left">
+                    <div class="icon extra6" ><i class="fas fa-trash"></i></div>
+                    <div class="card-text">Delete account</div>
+                </div>
+                <div class="card-right"><i class="fa fa-angle-right"></i></div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+
+<script>
+    document.getElementById('backButton').addEventListener('click', function() {
+      window.history.back(); // Simulate the browser's back button
+    });
+
+
+    
+    // document.getElementById('userImageInput').addEventListener('change', function () {
+    //   document.getElementById('imageUploadForm').submit();
+    // });
+
+  
+  document.getElementById('userImageInput').addEventListener('change', function () {
+    const form = document.getElementById('imageUploadForm');
+    const formData = new FormData(form);
+
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', '/uploadd', true);
+
+    xhr.onload = function () {
+      if (xhr.status === 200) {
+        console.log('Image uploaded successfully');
+        window.location.reload();
+        // Handle success, e.g., update user's profile picture on the frontend
+      } else {
+        console.error('Image upload failed');
+        // Handle the failure scenario
+      }
+    };
+
+    xhr.send(formData);
+  });
+
+</script>
+</html>

@@ -1,0 +1,543 @@
+
+:root {
+    --edge: #232323;
+    --back: #000000;
+    --theme: #eaaa00;
+    --color: #3a3d3f;
+    --hover: #eaaa00;
+    --tcolor: #fff;
+    --yel: #34bcf0;
+    --new: #54565a;
+    --darker: #26282a;
+
+    --grey: #e1e1e1;
+    
+    --bordGrad:  linear-gradient(to right,#02aac6, #72e4cb) 1;
+    
+    
+  }
+
+  * {
+    transition: all ease-in-out 0.5s;
+    /* border: solid 1px rgb(68, 5, 241); */
+  }
+@font-face {
+    font-family: 'NET';
+    src: 
+         /* url('../fonts/NetflixSansBold.ttf'), */
+         /* url('../fonts/NetflixSansIcon.ttf'), */
+         url('../fonts/NetflixSansLight.ttf'),
+         /* url('../fonts/NetflixSansMedium.ttf'), */
+         /* url('../fonts/NetflixSansRegular.ttf'), */
+         url('../fonts/NetflixSansThin.ttf');
+    
+}
+
+@font-face {
+    font-family: 'BEN';
+    src: url('../fonts/NetflixSansBlack.ttf'),
+         url('../fonts/NetflixSansBold.ttf'),
+         url('../fonts/NetflixSansIcon.ttf'),
+         url('../fonts/NetflixSansLight.ttf'),
+         url('../fonts/NetflixSansMedium.ttf'),
+         url('../fonts/NetflixSansRegular.ttf'),
+         url('../fonts/NetflixSansThin.ttf');
+    
+}
+
+
+
+
+.nav-link {
+    font-family: 'NET';
+    font-size: 1.5vw;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 40%;
+    /* border: solid 2px green; */
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 60%;
+    height: 100%;
+    /* border: solid 1px rgb(170, 130, 238); */
+}
+
+
+.user-inc{
+    display: flex;
+    width: 100%;
+    height: 87vh;
+    padding-top: 15vh;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    gap: 7%;
+    overflow: hidden;
+    overflow-y: scroll;
+    /* background-color: #02aac6; */
+}
+
+
+.firstUser-Det{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 45vh;
+    /* border: solid 2px var(--hover); */
+    flex-direction: row;
+    gap: 4%;
+}
+.gentle-faced{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 38vh;
+    width: 25%;
+    /* background-image: url("../image/planet-orbits.webp"); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* border: solid 0.7px var(--new); */
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+
+
+.addPicBtn{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 10%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    
+}
+
+.bold1001{
+    font-family: "BEN";
+    font-size: 2vw;
+}
+
+.bold1002{
+    font-family: "BEN";
+    font-size: 2vw;
+    border: solid 1px var(--new);
+}
+
+
+.addPicBtn::before{
+    content: '+';
+    /* padding: 20%; */
+    padding-left: 5px;
+    font-size: 2vw;
+    color: var(--tcolor);
+    background-color: var(--hover);
+}
+
+.user-img{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.casual-details{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 70%;
+    gap: 10.3%;
+    border-bottom: solid 1px var(--new);
+}
+
+.casual-left{
+    display: flex;
+    flex-direction: column;
+    gap: 1%;
+    height: 100%;
+    width: 50%;
+}
+
+.casual-right{
+    display: flex;
+    height: 100%;
+    width: 50%;
+    background: url(../img/undraw_credit_card_re_blml.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-items: last baseline;
+    padding-right: 7%;
+    justify-content: flex-end;
+}
+
+.bookNumberOFResults{
+    gap: 4%;
+}
+.UserName{
+    margin: 0;
+    padding: 0;
+    font-family: "BEN";
+    color: var(--new);
+    padding-top: 3.5%;
+    padding-bottom: 3.5%;
+    width: 100%;
+}
+
+.Divname{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 0.7px solid var(--new );
+    /* border-radius: 2px; */
+
+}
+
+.toBereturned1{
+    display: none;
+    /* background-color: #02aac6; */
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 40%;
+    height: 40vh;
+    margin: 1%;
+    border-radius: 10px;
+    /* border: solid 2px var(--new); */
+    box-shadow: 0 0 50px var(--new);
+    position: absolute;
+    background: var(--tcolor);
+    /* backdrop-filter: blur( 17px );
+    -webkit-backdrop-filter: blur( 17px ); */
+}
+.meercBody{
+    display: flex;
+    width: 80%;
+    height: 80%;
+    color: var(--edge);
+    /* background-color: var(--new); */
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'BEN';
+    font-size: 2vw;
+}
+.lowerBelt{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 20%;
+}
+.vpt{
+    background-color: var(--edge);
+}
+
+.di2{
+    border-bottom: none;
+}
+.dpf{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: none;
+}
+
+.lCardN{
+    font-family: "BEN";
+    margin-right: 5%;
+    color: var(--hover);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+    text-wrap: nowrap;
+}
+
+.di1{
+    display: flex;
+    align-items: first baseline;
+}
+
+.na1{
+    display: flex;
+    align-items: first baseline;
+}
+
+.libCDAte{
+    font-family: "BEN";
+    color: var(--new);
+}
+
+
+.reqbookCard{
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5%;
+    row-gap: 5%;
+    /* border: solid 1px red ; */
+    padding: 0;
+    padding-bottom: 6%;
+}
+
+.box-tag-hold{
+    display: flex;
+    /* padding-top: 0.1%;
+    padding-bottom: 0.1%; */
+    width: 100%;
+    border-bottom: solid 1px var(--new);
+    color: var(--color);
+    font-family: "BEN";
+    font-size: 2vw;
+}
+
+.toBereturned{
+    display: flex;
+    /* background-color: #02aac6; */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 40%;
+    height: 40vh;
+    margin: 1%;
+    border-radius: 10px;
+    border: solid 2px var(--new);
+}
+
+.covHolder{
+    width: 50%;
+    height: 100%;
+}
+
+.bokreSched{
+    width: 50%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+.tinyFont{
+    font-size: 0.8vw;
+}
+.clock-work{
+    height: 80%;
+    width: 100%; 
+    /* border: solid 1px red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock-work .circle{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock-work .circle svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
+}
+
+
+.clock-work .circle svg circle{
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke-width: 8;
+    stroke: #fb0000;
+    stroke-linecap: round;
+    transform: translate(5px,5px);
+}
+
+.clock-work .circle svg circle{
+    stroke: var(--hover);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+}
+
+.clock-work div{
+    position: absolute;
+    text-align: center;
+    font-weight: 500;
+    color: var(--hover);
+    font-size: 1.5em;
+    font-family: "BEN";
+}
+
+
+.clock-work div span{
+    position: absolute;
+    transform: translateX(-50%) translateY(-10px);
+    font-size: 0.35em;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.clock-work .dots{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center ;
+    align-items: flex-start;
+    z-index: 1000;
+    border: solid 4px var(--new);
+}
+
+
+.clock-work .dots::before{
+    content: '';
+    position: absolute;
+    top: -3px;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--tcolor),0 0 60px var(--tcolor);
+
+}
+
+.bookLaws{
+    font-family: "NET";
+    color: var(--darker);
+}
+
+.likedBook-div{
+    width: 15vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    /* border: solid green 1px; */
+    gap: 1%;
+}
+
+.zunder{
+    position: absolute;
+    z-index: -1;
+}
+
+.likedBook-pic{
+    height: 80%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.likedBookname{
+    display: flex;
+    height: fit-content;
+    font-family: "NET";
+    
+}
+
+.dented-det{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: last baseline;
+    height: 100%;
+    width: 50%;
+    gap: 2vh;
+    margin-left: 6%;
+    /* border: solid 1px violet; */
+}
+
+.stars{
+    width: 100%;
+    height: fit-content;
+    color: var(--hover);
+    display: flex;
+}
+
+.humanActions{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 4%;
+}
+
+.greBack{
+    background: #808000;
+}
+
+.pciviv{
+    width: 100%;
+    height: 100%;
+    
+} 
+
+@media screen and (max-width: 714px) {
+    .firstUser-Det{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80vh;
+        /* border: solid 2px var(--hover); */
+        flex-direction: column;
+        gap: 4%;
+    }
+
+    .casual-right{
+        width: 100%;
+    }
+
+    .casual-left{
+        width: 100%;
+
+    }
+
+    .casual-details{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 80%;
+        gap: 0%;
+        border-bottom: solid 1px var(--new);
+    }
+
+    .gentle-faced{
+        width: 80%;
+    }
+
+    .bold1001{
+        font-family: "BEN";
+        font-size: 4vw;
+    }
+
+   
+
+
+}

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="../css/all.min.css">
+    <script defer src="../js/all.min.js"></script>
+    <link rel="stylesheet" href="../fonts/NetflixSansBlack.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansBold.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansIcon.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansLight.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansMedium.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansRegular.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansThin.ttf">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/library.css">
+    <link rel="stylesheet" href="../css/userOval.css">
+
+    <script defer src="../js/library.js"></script>
+
+
+</head>
+<body>
+    <div class="nav-bar" id="navi">
+        <div class="nav-left">
+            <a class="nav-img" href="/" ></a>
+            <div class="name ">eakReads</div>
+        </div>
+        <div class="nav-right">
+            <div class="nav-link "><a class="cont-link" href="/about-page">About</a></div>
+            <div class="nav-link "><a class="cont-link loca" href="/library">Library</a></div>
+            <div class="nav-link "><a class="cont-link"  href="https://www.bing.com/ck/a?!&&p=d97e0bb0affa36a9JmltdHM9MTcwMTM4ODgwMCZpZ3VpZD0xYjAwYzQyOC0yMjhmLTY0OTQtMTY5Zi1kNmNhMjM5MjY1ZmImaW5zaWQ9NTE5Nw&ptn=3&ver=2&hsh=3&fclid=1b00c428-228f-6494-169f-d6ca239265fb&psq=sites+that+provide+reading+music&u=a1aHR0cHM6Ly84dHJhY2tzLmNvbS9leHBsb3JlL3JlYWRpbmc&ntb=1">Library tunes</a></div>
+            <%-include('_nav-bar')%>
+        </div>
+    </div>
+    <div class="budge">
+        <div class="logo">
+            <div class="nav-img" ></div>
+        </div>
+        <div class="drop-btn " id="dpb"><i class="d-btn fa fa-bars"></i></div>
+    </div>
+    <div class="lib-hold">
+        <div class="src-top-h">
+            <div class="viewPic2"> 
+                <div class="jackAlign twicth">Resource </div>
+                <select class="expand" name="ResourceType" id="resourceType">
+                    <option value="" selected disabled>None</option>
+                    <option value="Social Science">Social Science</option>
+                    <option value="Health & Medical">Health & Medical</option>
+                    <option value="Chemistry">Chemistry</option>
+                    <option value="Faith">Faith</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Physics">Physics</option>
+                    <option value="Earth Science">Earth Science</option>
+                    <option value="Arts">Arts</option>
+                    <option value="Economics">Economics</option>
+                    <option value="Business">Business</option>
+                    <option value="Engineering">Engineering</option>
+                    <option value="Life Sciences">Life Sciences</option>
+                </select>
+            </div>
+            <a class="viewPic datinger" href="/library">Remove filter</a>
+            
+            <div class="viewPic2 datinger">Date<input class="expand" type="month" min="2000-01" max="2024-12" id="publicationDate"></div>
+            <div  class="cta-inp strechUOP">
+                <input class="cta-input" id="pt" placeholder="Search for a keyword, title, abstract, author, journal, ISSN, ISBN" type="text">
+                <div class="cta-srcha">
+                    <div class="cta-srch" onclick="searchBooks()" ><i class="src-icon fa fa-search"></i></div>
+                </div>
+            </div>
+
+            
+              
+          
+
+        </div>
+        <div class="lib-card">
+            <div class="bookNumberOFResults">
+                <p>showing</p>
+                <p class="bold100"><%=books.length%></p>
+                <p>results</p>
+            </div>
+            <%-include('_newBooks')%>
+            <!-- <div class="lib-det-card">
+                <div class="book-long-title">TECHNO-ECONOMIC ASSESMENT FOR DISTRIBUTED GENERATION PLACEMENT IN DISTRIBUTION SYSTEM</div>
+                <div class="book-proper-details">
+                    <div class="static-details">
+                        <p class="author-txt">Author(s)</p>
+                        <p class="author-txt">Publication year</p>
+                        <p class="author-txt">Publication title</p>
+                        <p class="author-txt">Resource type</p>
+                    </div>
+                    <div class="non-static-det">
+                        <p class="details-stats">Graham Lee, Paul David</p>
+                        <p class="details-stats">2019</p>
+                        <p class="details-stats">Toshiba: Journal Technology of civic, Electrical, Mechanical, Geology, Minning and urban history</p>
+                        <p class="details-stats">Journal</p>
+                    </div>
+                </div>
+                <div class="carryMore-details">the republic of ohio is one of the most LG mobile-user-populated cities in the world, with 89% percent of its populations mobile users accustomed to the LG mobile Phone, students of history in the alabama state university held a study that reveales that the LG brands phrase "Life's good" relates to an ohian historical greeting "tekar" meaning "Life is good"</div>
+                <div class="butCollection">
+                    <div class="viewPic">View Cover</div>
+                    <div class="Shelftloca"> <i class="fa fa-location-pin"></i>Locate</div>
+                    <div class="more-dets"><i class="fa fa-angle-down"></i> More details</div>
+                    <div class="like-book"><i class="fa fa-thumbs-up"></i></div>
+                    <div class="req-book">Request Book</div>
+                </div>
+            </div> -->
+        </div>
+        
+    </div>
+</body> 
+
+<!-- <script>
+    async function searchBooks() {
+        const searchQuery = document.getElementById('pt').value;
+
+        try {
+            const response = await fetch(`/library?search=${searchQuery}`);
+            const data = await response.json();
+
+            // Update the page with the new results, e.g., by manipulating the DOM
+            console.log(data); // Log the data to see the structure
+
+            // Update your page with the results, for example, by populating a result container
+            // with the received data.
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    }
+</script> -->
+
+<script>
+// async function searchBooks() {
+//   const searchQuery = document.getElementById('pt').value;
+//   try {
+//     const url = `/library?search=${encodeURIComponent(searchQuery)}`;
+//     window.location.href = url; // Redirects to the library page with the search query
+//   } catch (error) {
+//     console.error('Error redirecting:', error);
+//   }
+// }
+
+async function searchBooks() {
+  const searchQuery = document.getElementById('pt').value;
+  const resourceType = document.getElementById('resourceType').value;
+  const publicationDate = document.getElementById('publicationDate').value;
+
+  try {
+    let url = `/library?search=${encodeURIComponent(searchQuery)}`;
+    if (resourceType) {
+      url += `&resourceType=${encodeURIComponent(resourceType)}`;
+    }
+    if (publicationDate) {
+      url += `&publicationDate=${encodeURIComponent(publicationDate)}`;
+    }
+
+    window.location.href = url; // Redirects to the library page with the search query and additional parameters
+  } catch (error) {
+    console.error('Error redirecting:', error);
+  }
+}
+document.addEventListener('DOMContentLoaded', function() {
+    const moreDetailsButtons = document.querySelectorAll('.more-dets');
+
+    moreDetailsButtons.forEach((button, index) => {
+        button.addEventListener('click', function() {
+            const card = this.closest('.lib-det-card');
+            const carryMoreDetails = card.querySelector('.carryMore-details');
+
+            card.classList.toggle('expanded');
+            carryMoreDetails.classList.toggle('expanded');
+
+            const icon = this.querySelector('.cargo');
+            icon.classList.toggle('fa-angle-down');
+            icon.classList.toggle('fa-angle-up');
+
+            // Toggle the text content
+            const text = this.querySelector('.text');
+            text.textContent = text.textContent === 'More details' ? 'Less' : 'More details';
+        });
+    });
+});
+
+
+
+
+
+</script>
+</html>

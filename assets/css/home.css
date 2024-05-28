@@ -1,0 +1,1552 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --edge: #232323;
+    --back: #000000;
+    --theme: #eaaa00;
+    --color: #3a3d3f;
+    --hover: #eaaa00;
+    --tcolor: #fff;
+    --yel: #34bcf0;
+    --new: #54565a;
+    --darker: #26282a;
+
+    --grey: #e1e1e1;
+    
+    --bordGrad:  linear-gradient(to right,#02aac6, #72e4cb) 1;
+    
+    
+  }
+
+  * {
+    transition: all ease-in-out 0.5s;
+    /* border: solid 1px rgb(68, 5, 241); */
+  }
+@font-face {
+    font-family: 'NET';
+    src: 
+         /* url('../fonts/NetflixSansBold.ttf'), */
+         /* url('../fonts/NetflixSansIcon.ttf'), */
+         url('../fonts/NetflixSansLight.ttf'),
+         /* url('../fonts/NetflixSansMedium.ttf'), */
+         /* url('../fonts/NetflixSansRegular.ttf'), */
+         url('../fonts/NetflixSansThin.ttf');
+    
+}
+
+@font-face {
+    font-family: 'BEN';
+    src: url('../fonts/NetflixSansBlack.ttf'),
+         url('../fonts/NetflixSansBold.ttf'),
+         url('../fonts/NetflixSansIcon.ttf'),
+         url('../fonts/NetflixSansLight.ttf'),
+         url('../fonts/NetflixSansMedium.ttf'),
+         url('../fonts/NetflixSansRegular.ttf'),
+         url('../fonts/NetflixSansThin.ttf');
+    
+}
+.nav-bar {
+    /* border: solid 3px blue;   */
+    position: fixed;
+    height: 9vh;
+    width: 100%;
+    /* margin-top: 1.2%; */
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+    justify-content: center;
+    box-sizing: border-box;
+    z-index: 3;
+    border-bottom: solid 2px var(--theme);
+    box-shadow: 2px 1px 10px black;
+    /* border-radius: 8px; */
+    border-bottom: solid 1px var(--hover);
+   
+    
+}
+
+.budge{
+    display: flex;
+    position: fixed;
+
+    height: 9vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    background-color: var(--tcolor);
+    box-shadow: 1px 2px 10px black;
+    visibility: hidden;
+
+}
+
+.drop-btn{
+    width: 50%;
+    height: 100%;
+    /* border: solid 2px #02aac6; */
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    font-size: 8vw;
+    color: var(--color);
+
+}
+
+.d-btn {
+    /* border: solid 1px green; */
+    width: 50%;
+    padding: 8%;
+    /* font-weight: 100; */
+
+}
+
+.logo{
+    width: 50%;
+    height: 100%;
+    /* border: solid 2px #02aac6; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50%;
+    height: 100%;
+    /* border: solid 1px rgb(236, 238, 130); */
+
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 50%;
+    height: 100%;
+    /* border: solid 1px rgb(170, 130, 238); */
+}
+
+.nav-img {
+    width: 17%;
+    height: 68%;
+    /* border: solid 1px black; */
+    background-image: url("/img/book_bird.png-removebg-preview.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+.loca{
+    color: var(--hover);
+}
+.name{
+    width: 23%;
+    height: 68%;
+    display: flex;
+    align-items: center;
+    /* background: -webkit-linear-gradient(#fff,#eaaa00 ); */
+    background: var(--hover);
+    font-family: 'BEN';
+    font-size: 2vw;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    justify-content: flex-start;
+    /* border: solid red 1px; */
+}
+
+.nav-link {
+    font-family: 'NET';
+    font-size: 1.5vw;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 20%;
+    /* border: solid 2px green; */
+}
+
+.cont-link:hover {
+    color: var(--theme);
+}
+
+.log-in{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 75%;
+    font-family: 'BEN';
+    font-size: 1.3;
+    /* font-weight: 600; */
+    border: solid 1.5px var(--theme);
+    border-radius: 8px;
+    /* border-image: linear-gradient(to right,#02aac6, #72e4cb)1 ; */
+    margin-right: 2%;
+    /* box-sizing: border-box; */
+}
+.in {
+    background-color: var(--back);
+
+}
+.tos {
+    border-radius: 6px;
+    
+}
+
+
+.log-in:hover .tos {
+    background-color: var(--back);
+    color: var(--tcolor);
+}
+
+.in:hover .tos2 {
+    background-color: var(--tcolor);
+    color: var(--theme);
+
+}
+
+.log {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* border: solid greenyellow 2px; */
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    flex-direction: column;
+}
+.tos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    color: var(--back);
+}
+
+.tos2{
+    color: var(--tcolor);
+}
+
+.cta-txt {
+    color: var(--tcolor);
+    font-family: 'BEN';
+    font-size: 5.1vw;
+    margin-bottom: 1%;
+}
+
+.cta-txt2{
+    font-family: 'NET';
+    color: var(--tcolor);
+    margin: 0;
+}
+
+.cta-inp {
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    /* border: solid 1px red; */
+    background-color: var(--tcolor);
+    width: 46%;
+    height: 7%;
+    border-radius: 8px;
+
+}
+
+.cta-srcha {
+    height: 97%;
+    width: 10%;
+    /* background: yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100;
+    /* border-left: solid 1px ; */
+    color: var(--yel);
+    border-top: 2px solid var(--theme);
+    border-right: 2px solid  var(--theme);
+    border-bottom:2px solid var(--theme);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+
+.cta-srch {
+    height: 80%;
+    width: 100%;
+    /* background: yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100;
+    border-left: solid 1px ;
+    color: var(--theme);
+
+}
+
+.cta-srch:hover .src-icon  {
+    color: #000000;
+    transition: ease-in-out 0.1ms;
+}
+
+.src-icon {
+    font-size: 2vw;
+    font-family: 'NET';
+}
+
+.cta-input {
+    width: 90%;
+    height: 93%;
+    font-family: 'NET';
+    font-size: 1vw;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    outline: none;
+    border: none;
+    border-top: 2px solid var(--theme);
+    border-left: 2px solid  var(--theme);
+    border-bottom:2px solid var(--theme);
+    /* border-right:2px solid transparent ; */
+    text-align: center;
+}
+
+
+
+.cont-link{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color);
+    width: 100%;
+    height: 100%;
+}
+
+
+.und-txt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 0.5%;
+}
+.top-pic {
+    /* margin-top: 10px; */
+    
+    /* border: solid 3px #f30202; */
+    
+    display: flex;
+    height: 100vh;
+    width: 100%;   
+    justify-content: center;
+    align-items: center;
+    /* background-image: url(../image/banner-2022.webp); */
+    background: rgba(17, 25, 40, 0.56);
+    /* backdrop-filter: blur( 17px ); */
+    /* -webkit-backdrop-filter: blur( 17px ); */
+    /* border-radius: 10px; */
+    /* border: 1px solid rgba(255, 255, 255, 0.125); */
+    position: relative;
+    overflow: hidden;
+
+
+}
+
+#myVideo {
+    /* border: solid 2px greenyellow; */
+    position: absolute;
+    object-fit: cover;
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    /* z-index: 2; */
+    z-index: -1;
+}
+
+.stats-board {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+    width: 94%;
+    border-radius: 10px;
+    height: 100%;
+    border: solid 1px #c9c9c9 ;
+    box-shadow: 0px 3px 4px #c9c9c9;
+
+}
+
+.stat-bHold{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-bottom: 10%; */
+}
+.stat-Right{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    /* border: solid 1px yellowgreen; */
+}
+.stat-Left{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border: solid 1px rgb(206, 12, 12); */
+    
+}
+
+.acaStats{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 70%;
+    width: 40%;
+    border-left: solid 1px var(--back);
+    box-sizing: border-box;
+    
+}
+
+.pubStats{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 70%;
+    width: 40%;
+    /* border-left: solid 1px var(--color); */
+    box-sizing: border-box;
+
+}
+
+.langStats{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 70%;
+    width: 40%;
+    box-sizing: border-box;
+}
+
+.bookStats{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-right: solid 1px var(--color);
+    height: 70%;
+    width: 40%;
+    /* border-right: solid 1px violet; */
+    box-sizing: border-box;
+}
+
+
+
+.num1{
+    font-size: 3.5vw;
+    margin: 0;
+    font-family: 'BEN';
+    /* border: solid 1px red; */
+    padding: 0;
+    color: #f4b223;
+
+}
+
+.num2{
+    font-size: 3.5vw;
+    margin: 0;
+    font-family: 'BEN';
+    /* border: solid 1px red; */
+    padding: 0;
+    color: #25c3c3;
+
+}
+
+.num3{
+    font-size: 3.5vw;
+    margin: 0;
+    font-family: 'BEN';
+    /* border: solid 1px red; */
+    padding: 0;
+    color: #0f8ed5;
+}
+.num4{
+    font-size: 3.5vw;
+    margin: 0;
+    font-family: 'BEN';
+    /* border: solid 1px red; */
+    padding: 0;
+    color: #f0976c;
+}
+
+.under-txt{
+    margin: 0;
+    /* border: solid 1px rgb(30, 255, 0); */
+    padding: 0;
+    font-family: 'NET';
+    color: var(--color);
+
+}
+
+.boastHold{
+    margin-top: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30vh;
+    /* border: solid 1px red; */
+    margin-bottom: 5%;
+}
+
+.boastCard-left {
+    display: flex;
+    height: 100%;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.boastCard-Right {
+    display: flex;
+    height: 100%;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.cell{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 40%;
+}
+
+.boastImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 70%;
+}
+
+.boastTxt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 30%;
+    color: var(--color);
+    font-family: "NET";
+    text-align: center;
+}
+
+.bookSlide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 70vh;
+    /* border: solid 1px red; */
+}
+
+.disTxt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    font-family: "BEN";
+    font-size: 2.8vw;
+    color: var(--color);
+}
+
+.disTXT{
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    font-family: "NET";
+    font-size: 1.8vw;
+}
+
+.slide-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    /* border: solid 1px blue; */
+    flex-direction: row;
+}
+
+.book-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 93%;
+    height: 80%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    /* gap: 3%; */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.btn-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3%;
+    height: 90%;
+    font-size: 4vw;
+    color: grey;
+}
+.inner-book{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow-x: scroll;
+    width: fit-content;
+    height: 100%;
+    /* border: solid green; */
+    gap: 25px;
+    scroll-behavior: smooth;
+    /* padding-left: 84vw; */
+    
+}
+
+.inner-book::-webkit-scrollbar{
+    display: none;
+}
+
+.slider{
+    display: flex;
+    height: 94%;
+    /* width: 200px; */
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    /* background: url(/img/chemicalReviews.webp); */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 1px 1px 10px grey;
+    border-radius: 8px;
+    /* overflow: hidden; */
+    box-sizing: border-box;
+    /* border: solid red; */
+    cursor: pointer;
+    color: var(--edge);
+}
+
+.slider:hover {
+    scale: 1.04;
+
+    transition: ease-in-out 0.5ms;
+
+}
+
+.slider:hover .book-dtl{
+    visibility: visible;
+}
+
+
+.book-dtl{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 20%;
+    border-radius: 8px;
+    visibility: hidden;
+    /* border: solid red 1px; */
+}
+
+.book-budge{
+    width: 100%;
+    height: 1%;
+   
+}
+.book-budge-txt{
+    padding-left: 75px;
+    padding-right: 75px;
+    
+    color: transparent;
+}
+.nameDts{
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: flex-start;  */
+    /* text-align: start; */
+    width: 100%;
+    background-color: rgb(255, 255, 255,0.8);
+    font-family: "BEN";
+    font-size: 0.9vw;
+    height: fit-content;
+    height: 50%;
+
+}
+
+.date{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    background-color: var(--tcolor);
+    font-family: "BEN";
+    font-size: 0.9vw;
+    height: fit-content;
+    height: 50%;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+
+
+}
+
+.nametxt {
+    margin: 0;
+ 
+}
+
+.circle{
+    /* box-shadow: 0.1px 0.1px 3px var(--hover); */
+    border-radius: 50px;
+    height: 20%;
+    width: 100%;
+    /* border: 0.1px solid var(--color); */
+}
+
+.circle:hover{
+    transition: ease-in-out 0.2 ;
+    color: var(--back);
+}
+
+.collection{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 78vh;
+    /* border: solid 1px yellow; */
+}
+
+.coll-inner{
+    display: flex;
+    /* border: solid 3px red; */
+    width: 100%;
+    height: 90%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.coll-left{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 70%;
+    width: 70%;
+    /* border: solid 1px yellowgreen; */
+    /* gap: 10%; */
+    border-right: solid 1px var(--grey);
+    -webkit-font-smoothing: unset;
+}
+
+.coll-right{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    height: 70%;
+    width: 30%;
+    cursor: pointer;
+    /* border: solid 1px rgb(205, 55, 50); */
+}
+
+.zoo{
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+    width: 90%;
+    height: 46%;
+    cursor: pointer;
+    /* border: solid 1px yellow; */
+}
+
+
+.zoo2{
+    flex-direction: column;
+}
+.picLeft{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: solid 2px #f42323; */
+    height: 100%;
+    width: 20%;
+    border-radius: 11px;
+    overflow: hidden;
+}
+
+.photo{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.wring-right{
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 78%;
+    height: 100%;
+}
+
+.wringText1{
+    margin-bottom: 1%;
+    font-family: "NET";
+    color: var(--hover);
+}
+.wringText2{
+    margin-bottom: 1%;
+    font-family: "BEN";
+    font-size: 1.2vw;
+    color: var(--back);
+}
+.wringText3{
+    font-family: 0.1rem;
+    font-family: "NET";
+    color: var(--color);
+}
+
+
+.txtWindow{
+    width: 80%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.picHold{
+    display: flex;
+    width: 80%;
+    height: 40%;
+    align-items: left;
+    justify-content: left;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.yelTxt{
+    margin-bottom: 1%;
+    display: flex;
+    align-items: center;
+    height: 13%;
+    font-family: "NET";
+    color: var(--hover);
+}
+.midtxt{
+    height: 13%;
+    display: flex;
+    margin-bottom: 1%;
+    font-family: "BEN";
+    font-size: 1.2vw;
+    color: var(--back);
+    width: 70%;
+}
+.greyTxt{
+    /* margin-top: 6%; */
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    font-size: 0.9vw;
+    font-family: "NET";
+    color: var(--color);
+}
+
+.wcbr{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    /* border: solid 1px green; */
+}
+
+.beeDiv{
+    display: flex;
+    width: 95%;
+    height: 77%;
+    justify-content: right;
+    align-items: center;
+    /* border: solid 1px rgb(128, 0, 0); */
+    background-image: url(/img/bgWhatZendy.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+}
+
+.features{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90%;
+    /* padding-top: 10%; */
+    width: 45%;
+    /* border: solid 1px white; */
+    /* gap: 2%; */
+    justify-content: space-evenly;
+}
+
+
+
+.feat-top{
+    font-size: 2.2vw;
+    color: var(--new);
+    font-family: "BEN";
+}
+
+.feat-step{
+    color: var(--new);
+    font-family: "NET";
+    font-size: 1.4vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 0%;
+    width: 84%;
+    height: fit-content;
+    padding: 0;
+
+}
+
+
+
+.bold-grey{
+    margin: 0;
+    font-family: "BEN";
+    font-weight: 100;
+    height: fit-content;
+    padding: 0;
+}
+
+.ptag{
+    padding: 0;
+    margin: 0;
+    height: fit-content;
+}
+
+.research-btn{
+    display: flex;
+    justify-self: flex-start;
+    align-self: first baseline;
+    justify-content: center;
+    align-items: center;
+    /* border: solid red 1px; */
+    margin-left: 8%;
+    border-radius: 25px;
+    background-color: var(--new);
+    font-family: "NET";
+    font-size: 1.3vw;
+    color: #fff;
+    height: 11%;
+    width: 55%;
+    box-shadow: 0px 5px 16px black;
+    cursor: pointer;
+}
+
+.research-btn:hover{
+    background-color: #fff;
+    color: var(--back);
+}
+
+.broaden-Search{
+    /* border: solid 1px purple; */
+    height: 35vw;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.broadTxt{
+    font-size: 2.8vw;
+    font-family: "NET";   
+}
+
+.broaden-inner{
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    /* border: solid 1px blueviolet; */
+    gap: 4%;
+}
+
+.bsLeft{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 44%;
+    /* border: solid red 1px; */
+    gap: 2%;
+}
+
+.bsRight{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 44%;
+    /* border: solid rgb(55, 0, 255) 1px; */
+    gap: 2%;
+
+}
+
+.edCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* border: solid 1px red; */
+    width: 14%;
+    height: 100%;
+    gap: 5%;
+    cursor: pointer;
+    /* border: solid 0.2px var(--new); */
+    box-shadow: 0px 2px 5px var(--new);
+    border-radius: 20px;
+    text-decoration: none;
+
+}
+
+.edCard:hover{
+    background-color: var(--grey);
+    scale: 1.05;
+}
+
+.edImg{
+    display: flex;
+    width: 30%;
+    height: 27%;
+}
+
+
+.edCardTxt{
+    font-size: 1.3vw;
+    font-family: "NET";
+    color: var(--new);
+
+}
+
+.pricePlans{
+    height: 65vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: solid 1px blue; */
+}
+
+.plansInner{
+    display: flex;
+    height: 78%;
+    width: 95%;
+    border: solid 3px var(--hover);
+    border-radius: 20px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.planLeft{
+    width: 40%;
+    height: 100%;
+    /* border: solid 1px red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(ellipse farthest-side at 30%  50% , #ffe7a5 , #fff );
+}
+
+.planRight{
+    width: 40%;
+    height: 100%;
+    /* border: solid 1px red; */
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+}
+
+.planList{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7%;
+    align-items: left;
+    width: 73%;
+    height: 60%;
+    /* border: solid 1px blue; */
+
+}
+
+.listItem{
+    font-size: 1.3vw;
+    font-family: "NET";
+    color: var(--new);
+    display: flex;
+    gap: 2%;
+
+}
+
+.mDi{
+    width: 90% ;
+    height: 90%;
+}
+
+.memberShip{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: flex-start;
+    align-self: flex-start;
+    font-family: "NET";
+    font-size: 1.2vw;
+    font-weight: 400;
+    width: 50%;
+    height: 27%;
+    text-decoration: none;
+    /* border: solid 1px green; */
+    background: var(--hover);
+    color: #fff;
+    border-radius: 30px;
+    box-shadow: 0px 1px 5px black;
+    cursor: pointer;
+}
+
+.memberShip:hover{
+    background-color: var(--tcolor);
+    color: var(--hover);
+}
+
+.questions{
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+    /* border: solid 1px green; */
+}
+.inner-quest{
+    display: flex;
+    height: 90%;
+    width: 95%;
+    justify-content: center;
+    align-items: flex-start;
+    /* border: solid 1px yellow; */
+}
+
+.leftQuest{
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    /* align-items: center; */
+    width: 30%;
+    height: 100%;
+    /* border: solid red 1px; */
+}
+
+.rightQuest{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 70%;
+    height: fit-content;
+    /* border: solid rgb(238, 255, 0) 1px; */
+}
+
+.vent{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    /* border: solid 1px red; */
+
+}
+
+.quest-drop{
+    display: flex;
+    height: fit-content;
+    /* justify-content: flex-end; */
+    align-items: first baseline;
+    height: fit-content;
+
+    gap: 0;
+    width: 90%;
+    flex-direction: column;
+    border-bottom: 1px solid var(--grey);
+    /* border: solid rgb(255, 157, 0) 1px; */
+}
+.qd{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+
+    margin: 0;
+    /* border: solid rgb(0, 247, 255) 1px; */
+}
+
+.rightQuest {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    /* justify-content: space-evenly; */
+    gap: 4vh;
+    align-items: center;
+}
+
+.num{
+    display: flex;
+    width: 10%;
+    height: fit-content;
+
+    /* justify-content: center; */
+    align-items: center;
+    font-family: "NET";
+    font-size: 1.5vw;
+    color: var(--hover);
+    /* border: solid rgb(0, 102, 255) 1px; */
+}
+
+.quesItem{
+    display: flex;
+    width: 80%;
+    justify-content: left;
+    height: fit-content;
+    align-items: center;
+    font-family: "NET";
+    font-size: 1.7vw;
+    color: var(--color);
+    /* border: solid rgb(255, 0, 247) 1px; */
+
+}
+
+.btnPlus{
+    display: flex;
+    width: 10%;
+    justify-content: center;
+    align-items: center;
+    font-family: "NET";
+    font-size: 1.8vw;
+    color: var(--new);
+    cursor: pointer;
+    /* border: solid rgb(0, 51, 255) 1px; */
+
+}
+
+.ddText{
+    display: flex;
+    width: 79%;
+    flex-direction: column;
+    align-items: first baseline;
+    font-family: "NET";
+    justify-self: end;
+    align-self: center;
+    margin: 0;
+    /* border: solid rgb(55, 255, 0) 1px; */
+    /* visibility: hidden; */
+    display: none;
+
+    
+}
+
+.start-link{
+    margin: 0;
+    color: var(--hover);
+    text-decoration: underline;
+    /* border: solid rgb(255, 0, 0) 1px; */
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    /* border: solid 1px pink; */
+    background-color: var(--darker);
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+}
+
+.foot-top{
+    /* border: solid 1px violet; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: 45%;
+}
+
+.foot-buttom{
+    /* border: solid 1px violet; */
+    display: flex;
+    width: 95%;
+    height: 55%;
+    flex-direction: row;
+}
+
+
+.ftp{
+    color: #fff8dd;
+    margin-bottom: 1%
+}
+
+.newsTAlk{
+    color: #fff8dd;
+    font-family: "NET";
+    display: flex;
+    width: 40%;
+    text-align: center;
+}
+
+.input-div{
+    margin-top: 2%;
+    width: 50%;
+    height: 23%;
+    /* border: solid 1px red; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 50px;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.email-field{
+    width: 75%;
+    height: 80%;
+    display: flex;
+    border: none;
+    outline: none;
+    padding-left: 5%;
+}
+
+.email-field::placeholder{
+    font-family: "NET";
+    font-size: 1.2vw;
+    
+}
+
+.join{
+    width: 16%;
+    height: 90%;
+    border-radius: 50px;
+    display: flex;
+    border: solid 1px var(--darker);
+    color: var(--new);
+    font-family: "NET";
+    font-size: 1.3vw;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.join:hover{
+    background-color: var(--hover);
+    color: #ffff;
+}
+
+.foot-left{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fl-holder{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+}
+.foot-right{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.fll{
+    display: flex;
+    height: 100%;
+    width: 50%;
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+}
+
+
+
+.flr{
+    display: flex;
+    justify-items: center;
+    height: 100%;
+    width: 30%;
+    /* border: solid 2px brown; */
+}
+
+.fhextra{
+
+}
+
+.orange-title{
+    border-bottom: solid 2.5px var(--hover);
+    width: fit-content;
+    font-family: "NET";
+    font-size: 1.7vw;
+    color: #ffffff;
+    margin-bottom: 2vh;
+
+}
+
+.otExtra{
+    width: 100%;
+}
+
+.below-ot{
+    font-family: "NET";
+    font-size: 1.3vw;
+    margin-top: 1.4vh;
+    color: #ffffff;
+    cursor: pointer;
+
+    /* margin-bottom: 5%; */
+}
+
+.otl{
+    width: 70%;
+}
+
+.fl-holderr{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    gap: 9%;
+}
+
+.inner-fl{
+    width: 40%;
+}
+
+.exp{
+    display: flex;
+    align-items:center ;
+    font-size: 1.7vw;
+    color: #ffffff;
+    font-family: "NET";
+    width: 80%;
+    border-bottom: 2.5px solid var(--hover);
+    margin-bottom: 2vh;
+}
+
+.socialMed{
+    width: 8%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3.7%;
+    align-items: center;
+}
+
+.footTxt{
+    border-top: solid 1px #fff;
+    height: 7.6%;
+    width: 50%;
+    display: flex;
+    color: #ffffff;
+    font-family: "NET";
+    align-items: center;
+    justify-content: center;
+    
+}
+.soci {
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 2%;
+    border: solid 3px transparent;
+}
+.soci:hover {
+    /* background-color: var(--hover); */
+    border: solid 3px var(--hover);
+    scale: 1.02;
+
+}
+
+.my-dropDown{
+    display: flex;
+}
+
+.noUnder{
+    text-decoration: none;
+}

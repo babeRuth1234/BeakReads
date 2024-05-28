@@ -1,0 +1,56 @@
+
+<div class="firstUser-Det">
+    <!-- <form class="gentle-faced" action="/upload" method="post" id="imageUploadForm" enctype="multipart/form-data">
+        <img src="" alt="User Image">
+
+        <input type="file" name="userImage" class="addPicBtn" accept="image/*" id="userImageInput" placeholder="fa fa-plus">
+    </form> -->
+    <form class="gentle-faced" action="/upload" method="post" id="imageUploadForm" enctype="multipart/form-data">
+        <img src="<%= user.ProfilePic %>" class="pciviv" alt="User Image" onerror="this.src='/img/undraw_male_avatar_g98d.svg'">
+        <input type="file" name="userImage" class="addPicBtn" accept="image/*" id="userImageInput" placeholder="fa fa-plus">
+        <input type="hidden" name="profilePic" value="ProfilePic"> <!-- Associate the uploaded file with the 'ProfilePic' field -->
+    </form>
+      
+    <div class="casual-details">
+        <div class="casual-left">
+            <div class="Divname di1"><p class="lCardN">First Name:</p><p class="UserName na1"><%= user.FirstName %></p></div>
+            <div class="Divname di1"><p class="lCardN">Last Name:</p><p class="UserName na1"><%= user.LastName %></p></div>
+            <div class="Divname"><p class="lCardN">Email:</p><p class="UserName"><%= user.Email %></p></div>
+            <div class="Divname di2"><p class="lCardN">Gender:</p><p class="UserName"><%= user.Gender %></p></div>
+            <!-- <div class="Divname di2"><p class="lCardN">Date:</p><p class="UserName"><%= user.Year %></p></div> -->
+
+        </div>
+        <a class="casual-right">
+            <p class="libCDAte">Library Code:</p>
+            <p class="lCardN"><%= user.libraryCard %></p>
+        </a>
+    </div>
+</div>
+<script>
+    // document.getElementById('userImageInput').addEventListener('change', function () {
+    //   document.getElementById('imageUploadForm').submit();
+    // });
+
+  
+  document.getElementById('userImageInput').addEventListener('change', function () {
+    const form = document.getElementById('imageUploadForm');
+    const formData = new FormData(form);
+
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', '/upload', true);
+
+    xhr.onload = function () {
+      if (xhr.status === 200) {
+        console.log('Image uploaded successfully');
+        window.location.reload();
+        // Handle success, e.g., update user's profile picture on the frontend
+      } else {
+        console.error('Image upload failed');
+        // Handle the failure scenario
+      }
+    };
+
+    xhr.send(formData);
+  });
+</script>
+    

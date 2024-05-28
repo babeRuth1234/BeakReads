@@ -1,0 +1,85 @@
+
+:root {
+    --edge: #232323;
+    --back: #000000;
+    --theme: #eaaa00;
+    --color: #3a3d3f;
+    --hover: #eaaa00;
+    --tcolor: #fff;
+    --yel: #34bcf0;
+    --new: #54565a;
+    --darker: #26282a;
+
+    --grey: #e1e1e1;
+    
+    --bordGrad:  linear-gradient(to right,#02aac6, #72e4cb) 1;
+    
+    
+  }
+
+  * {
+    transition: all ease-in-out 0.5s;
+    /* border: solid 1px rgb(68, 5, 241); */
+  }
+@font-face {
+    font-family: 'NET';
+    src: 
+         /* url('../fonts/NetflixSansBold.ttf'), */
+         /* url('../fonts/NetflixSansIcon.ttf'), */
+         url('../fonts/NetflixSansLight.ttf'),
+         /* url('../fonts/NetflixSansMedium.ttf'), */
+         /* url('../fonts/NetflixSansRegular.ttf'), */
+         url('../fonts/NetflixSansThin.ttf');
+    
+}
+
+@font-face {
+    font-family: 'BEN';
+    src: url('../fonts/NetflixSansBlack.ttf'),
+         url('../fonts/NetflixSansBold.ttf'),
+         url('../fonts/NetflixSansIcon.ttf'),
+         url('../fonts/NetflixSansLight.ttf'),
+         url('../fonts/NetflixSansMedium.ttf'),
+         url('../fonts/NetflixSansRegular.ttf'),
+         url('../fonts/NetflixSansThin.ttf');
+    
+}
+
+
+.arrangement{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3%;
+    font-family: "NEt";
+}
+.lemon input[type="radio"]:checked{
+    background-color: #eaaa00;
+}
+
+.sigClick{
+    display: flex;
+    /* border: solid 1px red; */
+    width: 90%;
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: var(--hover);
+    font-family: "BEN";
+    font-size: 1.5vw;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 2%;
+}
+
+.gender{
+    color: var(--new);
+    font-size: 1vw;
+}
+
+.gende{
+    font-family: "BEN";
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeakReads</title>
+    <link rel="shortcut icon" href="../image/favicon-book-logo-300x300.png" type="image/x-icon">
+    <link rel="stylesheet" href="../image/favicon-book-logo-300x300.png">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/user.css">
+    <!-- <link rel="stylesheet" href="../css/library.css"> -->
+    <link rel="stylesheet" href="../css/adminLook.css">
+    <script defer src="../js/all.min.js"></script>
+    <!-- <script defer src="../js/home.js"></script> -->
+    <link rel="stylesheet" href="../fonts/NetflixSansBlack.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansBold.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansIcon.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansLight.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansMedium.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansRegular.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansThin.ttf">
+</head>
+<body >
+    <div class="nav-bar" id="navi">
+        <div class="nav-left">
+            <a class="nav-img" href="/" ></a>
+            <div class="name ">eakReads</div>
+            
+        </div>
+        <div class="nav-right">
+            <div class="disTxt">Admin Filter</div>
+        </div>
+    </div>
+    <div class="budge">
+        <div class="logo">
+            <div class="nav-img" ></div>
+        </div>
+        <div class="drop-btn " id="dpb"><i class="d-btn fa fa-bars"></i></div>
+    </div>
+    <div class="adminFilterList">
+        <form id="newBouk" class="createBooks" action="/update-book/<%= book._id %>" method="post" enctype="multipart/form-data" >
+            <div  class="createLeftBook">
+                <p class="bold100 edegBoy">Add Book</p>
+                <div class="eachCreatDiv">
+                    <label for="bookTitle" class="carryMore-details">Publishing house</label>
+                    <input class="creatFild" name="Source" type="text" placeholder="First name" value="<%= book.Source%>">
+                </div>
+                <div class="eachCreatDiv">
+                    <label for="bookTitle" class="carryMore-details">Author(s)</label>
+                    <input class="creatFild" name="Author" type="text" placeholder="Name(s) of the author(s) of the book"  value="<%= book.Author%>">
+                </div>
+                <div class="eachCreatDiv">
+                    <label for="bookTitle" class="carryMore-details">Publication year</label>
+                    <input class="creatFild" name="Year" type="date" placeholder="Year in which books were published"  value="<%= book.Year.toISOString().split('T')[0] %>">
+                </div>
+                <div class="eachCreatDiv">
+                    <label for="bookTitle"   class="carryMore-details">Publication Title</label>
+                    <input class="creatFild" name="PublicationTitle" type="text" placeholder="Year in which books were published"  value="<%= book.PublicationTitle%>">
+                </div>
+                
+                <div class="eachCreatDiv1">
+                    <div class="eachCreatDiv2">
+                        <select class="expand" value="<%= book.ResourceType%>" name="ResourceType" id=""  >
+                            <option value="Social Science">Social Science</option>
+                            <option value="Health & Medical">Health & Medical</option>
+                            <option value="Chemistry">Chemistry</option>
+                            <option value="Faith">Faith</option>
+                            <option value="Computer Science">Computer Science</option>
+                            <option value="Physics">Physics</option>
+                            <option value="Earth Science">Earth Science</option>
+                            <option value="Arts">Arts</option>
+                            <option value="Economics">Economics</option>
+                            <option value="Business">Business</option>
+                            <option value="Engineering">Engineering</option>
+                            <option value="Life Sciences">Life Sciences</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="eachCreatDiv paticular">
+                    <label for="bookTitle" class="carryMore-details">Shelf location</label>
+                   <div class="sidswao">
+                       <input class="creatFild1" name="Aisle" type="number" placeholder="Aistle/Stack" value="<%= book.Aisle%>">
+                       <input class="creatFild1" name="Shelf" type="number" placeholder="Shelf" value="<%= book.Shelf%>">
+                        <input class="creatFild1" name="Row" type="number" placeholder="Shelf row" value="<%= book.Row%>">
+                   </div>
+                </div>
+                <div class="eachCreatDiv">
+                    <label for="bookTitle" class="carryMore-details">Number of copies</label>
+                    <input class="creatFild" name="NumberOfCopies" type="number" placeholder="Number of Copies"  value="<%= book.NumberOfCopies%>">
+                </div>
+                <div class="eachCreatDiv3">
+                    <label for="bookTitle" class="puby">Book Description</label>
+                    <textarea style="resize: none;" name="About" class="borderCurved" name="" id="" cols="30" rows="10" placeholder="About the book"  value="<%= book.About%>">
+                        <%= book.About %>
+                    </textarea>
+                </div>
+                <div class="butCollection theWikins">
+                    <button type="submit" class="viewPic">Update Book</button>
+                    
+                </div>
+            </div>
+            <div class="createRightBook">
+                <p class="bold100 edegBoy">Book cover</p>
+                <div class="imageBookBack">
+                    <img id="capturedImage" src="/<%= book.BookCover%>" class="bmage" alt="">
+                </div>
+                <div class="butCollection centtred">
+                    <!-- <input class="viewPic" type="file" placeholder="fa fa-file">Select File <i class="fa fa-file"></i></div> -->
+                    <div class="file-input-container">
+                        <label for="fileInput" class="file-label">
+                        <i class="fa fa-file"></i> Select a file
+                        </label>
+                        <input id="fileInput" name="BookCover" value="<%= book.BookCover%>" class="viewPic jadea" type="file" accept="image/*">
+                    </div>
+                    <!-- <div class="file-input-container">
+                        <label for="fileInput" class="file-label">
+                        <i class="fa fa-camera"></i> Picture
+                        </label>
+                        <input id="captureButton" type="button" class="col">View</input>
+                        
+                        <input id="fileInput" class="viewPic" type="file" accept="image/*" capture="environment" >
+                    </div> -->
+                    <!-- <div class="file-input-container">
+                        <label for="fileInput" class="file-label">
+                        <i class="fa fa-file"></i> Select a file
+                        </label>
+                        <input id="fileInput" class="viewPic" type="file">
+                    </div> -->
+                    <div id="cameraWindow">
+                        <video id="cameraFeed" autoplay></video>
+                    </div>
+                    <!-- <input type="button" value="/<%= book.BookCover%>" name="BookCover" id="captureButton" accept="image/*"> -->
+                    
+                    <!-- <div class="req-book remae"><i class="fa fa-camera"></i>Picture</div> -->
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get references to the file input and img tag
+        const fileInput = document.getElementById('fileInput');
+        const capturedImage = document.getElementById('capturedImage');
+
+        // Listen for the change event of the file input
+        fileInput.addEventListener('change', function () {
+            // Get the selected file
+            const file = fileInput.files[0];
+
+            if (file) {
+                // If a file is selected, update the src attribute of the img tag
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    capturedImage.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    });
+</script>
+
+
+</html>

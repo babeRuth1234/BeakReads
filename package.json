@@ -1,0 +1,39 @@
+{
+  "name": "library_management_system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.5.1",
+    "body-parser": "^1.20.1",
+    "config": "^3.3.9",
+    "crypto-js": "^4.1.1",
+    "date-fns": "^2.30.0",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "express-session-file-store": "^1.0.2",
+    "flutterwave-node": "^1.2.2",
+    "jsonwebtoken": "^9.0.2",
+    "method-override": "^3.0.0",
+    "mongoose": "^7.5.3",
+    "mongoose-auto-increment": "^5.0.1",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.7",
+    "nodemon": "^3.0.1",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "square": "^33.0.0",
+    "stripe": "^14.5.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.3.1"
+  }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <link rel="stylesheet" href="../css/all.min.css">
+    <script defer src="../js/all.min.js"></script>
+    <script defer src="../js/user.js"></script>
+    <link rel="stylesheet" href="../fonts/NetflixSansBlack.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansBold.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansIcon.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansLight.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansMedium.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansRegular.ttf">
+    <link rel="stylesheet" href="../fonts/NetflixSansThin.ttf">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/library.css">
+    <link rel="stylesheet" href="../css/user.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/userDeedS.css">
+
+    <!-- <link rel="stylesheet" href="../css/library.css"> -->
+
+
+</head>
+<body>
+    <div class="nav-bar" id="navi">
+        <div class="nav-left">
+            <a class="nav-img" href="/" ></a>
+            <div class="name ">eakReads</div>
+        </div>
+        <div class="nav-right">
+
+            <div class="nav-link " id="backButton">Back</div>
+
+
+
+        </div>
+    </div>
+    <div class="budge">
+        <div class="logo">
+            <div class="nav-img" ></div>
+        </div>
+        <div class="drop-btn " id="dpb"><i class="d-btn fa fa-bars"></i></div>
+    </div>
+    <div class="adminFilterList extraShf">
+        
+        <div class="boxes3">
+            <div class="boxes0" >Aisle<%= book.Aisle %></div>
+            <div class="boxes2">Shelf<%= book.Shelf %> </div>
+            <div class="boxes1">Row<%= book.Row%></div>
+        </div>
+    </div>
+</body>
+<script>
+     document.getElementById('backButton').addEventListener('click', function() {
+      window.history.back(); // Simulate the browser's back button
+    });
+</script>
+</html>
